@@ -1,0 +1,11 @@
+<?php foreach($vars['articles'] as $article): ?>
+  <div class="list-item">
+    <h2 class="list-post-title">
+      <a href="/post.php?id=<?= $article['id'];?>"><?= $article['title'];?></a>
+    </h2>
+    <div class="list-post-date">
+      <time><?= date('d M Y'); ?></time>, <?= $article['fullname']; ?>
+
+    </div>
+  </div>
+<?php endforeach; ?>

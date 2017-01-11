@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>My Blog</title>
+</head>
+<body>
+    <h1> My Blog! </h1>
+<?php foreach($latest as $article) { ?>
+    <p><?php echo $article['body']; ?> -- <a href="/blog/view.php?id=<?php echo $article['id']; ?>">View</a></p>
+<?php } ?>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="og:description" content="How can one honestly say, 'I am a philosopher -- *but not that kind*' if one doesn't really do anything to criticize 'that kind'. Or how can one say, 'I am a Christian -- *but not a radical, who blows up abortion clincs!*' if one doesn't do something to criticize radicalism? Konversari is a blog preoccupied with 'that kind'. ">
+  <meta name="description" content="How can one honestly say, 'I am a philosopher -- *but not that kind*' if one doesn't really do anything to criticize 'that kind'. Or how can one say, 'I am a Christian -- *but not a radical, who blows up abortion clincs!*' if one doesn't do something to criticize radicalism?  Konversari is a blog preoccupied with 'that kind'. ">
+
+
+  <title>Example.com Blog</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+  <h1 class="masthead-title">
+    <a href="/">Example.com Blog</a>
+  </h1>
+  <nav class="masthead-nav">
+    <?php foreach(ARTICLE_CATEGORIES as $id => $category) :?>
+        <a href="/?category=<?= $id; ?>"><?= $category; ?></a>
+    <?php endforeach; ?>
+
+    <?php if(!empty($_SESSION[USER_SESSION])): ?>
+      <a href="/post.php">post</a>
+      <a href="/admin.php">admin</a>
+      <a href="/login.php?logout=true">logout</a>
+    <?php else: ?>
+      <a href="/login.php">login</a>
+    <?php endif; ?>
+  </nav>
+</header>
+<div class="content list">

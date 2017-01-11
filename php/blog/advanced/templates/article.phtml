@@ -1,0 +1,10 @@
+
+<div class="content post">
+  <h1 class="post-title"><?= $vars['article']['title']; ?></h1>
+  <div class="post-date">
+    <time><?= date('d M Y', $vars['article']['date']); ?></time>, <?= $vars['article']['fullname']; ?>
+
+  </div>
+
+      <?= $vars['article']['body']; ?>
+</div>

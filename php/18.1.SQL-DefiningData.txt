@@ -1,0 +1,282 @@
+# let's imagine we have three tables of data:
+
+all_users                                   # name of the table of data
+
+id	username	password                    # columns (aka. fields)
+1	michael	      test                      # row 1
+2	watson	      test                      # row 2
+3	sherlock	  test                      # etc.
+4	watson	      test
+
+
+all_items
+
+id	name	          price
+1	oxfords	          300
+2	maxi	          150
+3	haulter neck      150
+4	cufflinks	      75
+
+
+all_carts
+
+user_id     item_id
+1           1
+1           4
+2           4
+3           1
+3           3
+
+
+
+# each set is known as a table
+# all three sets of data represent, together, a database
+
+# this database could be called, "shopping_data" since it contains:
+# all the users who can shop, all the items they can buy and all
+
+
+# note here we have a repetition in the users: there are two watson's -- each with the same password
+# this is quite common in real life: there are many people with the same name
+
+# so there is an "id" column which uniquely identifies a particular row of data
+# so that if 2-watson wants to change his password, for example, we know to change row 2
+# rather than row 4
+
+# columns which are used uniquely identify information are known as primary keys
+# (recall: the key of an associative array is just a way of looking up something in that array,
+#... equally here, the primary key, the primary way of looking it up).
+
+# primary keys are just usually integers which automatically increase by one
+# (that is, they automatically increment)
+# (recall:  just like sequential arrays! )
+
+# in the all_cart table we actually just use the id of the user and of the item
+# rather than all of its informaiton, so that we can pin-point exactly which user we mean
+# and it also saves us repeating a lot of information.. so identifying keys like this are quite useful!
+
+#...
+
+# we could write data out like this in a file,
+# however this is very hard to interrogate programmatically
+# ie., to easily ask questions about using a programming language
+# and very inefficient way to store it (eg., look at all the useless whitespace!)
+
+
+# so rather than writing these kinds of data files ourselves we usually leave it up to
+# a program called a database. A database can optimize the data it stores and provides
+# us a special language for querying (creating, reading, updating, deleting, etc.) that data.
+
+# what follows is a windows command-prompt session.
+    # The only difference on OSX (macs) will be the file paths.
+    # For example, xampp\bin is located at  /Applications/XAMPP/bin
+
+# NOTE: the hashes (#) ARE NOT PART OF the session, I have added these in late
+# they SHOULD NOT BE typed out, if you are following along
+
+# here we start the prompt:
+
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\Michael>cd C:\xampp\mysql\bin                          # cd to the folder containing the mysql program
+
+
+
+# having cd'd to the folder containing mysql, we run it:
+
+C:\xampp\mysql\bin>mysql
+
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 2
+Server version: 10.1.13-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+
+
+
+
+# here you get a new prompt (MaraDB >)
+
+# MaraDB is a "version" of MySQL (technically it's descended from MySQL but not exactly the same)
+
+# the MySQL prompt is just like the command or terminal prompt:
+# you can write commands at it and run them.
+
+# However the MySQL prompt takes commands in a special language called SQL
+# Structured Query Language (pronounced either ess-que-ell or sequel, preferably the former when dealing with MySQL)
+
+# at the end of this walkthrough we will go through all the SQL in detail, for now,
+# just observe the kinds of commands that can be written at the mysql prompt,
+# and what they mean...
+
+# we can ask what databases already exist:
+
+
+MariaDB [(none)]> show databases;
+
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| test               |
++--------------------+
+2 rows in set (0.02 sec)
+
+# immediately you can see that, as with PHP, all commands end with a semi-colon
+
+
+
+
+# and press Ctrl-C to exit
+
+MariaDB [(none)]> Bye
+Ctrl-C -- exit!
+
+
+
+
+# we can use a username and a password (the root user exists by default and has admin priviliages)
+# when running mysql use the -u and -p options:  mysql -uUSERNAME -pPASSWORD
+# if you omit the password, it will prompt you,
+
+C:\xampp\mysql\bin>mysql -uroot -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 4
+Server version: 10.1.13-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+
+# the default password for root on a typical xampp installation is empty
+# (but this is, of course, very bad practice!)
+
+
+#let's see the databases again:
+
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.00 sec)
+
+
+# now let's chose a database to use for all our subsequent commands:
+
+MariaDB [(none)]> use mysql;
+Database changed
+
+# now we've chosen the database called mysql, we can see how many tables it has:
+
+MariaDB [mysql]> show tables;
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| column_stats              |
+| columns_priv              |
+| db                        |
+| event                     |
+| func                      |
+| general_log               |
+| gtid_slave_pos            |
+| help_category             |
+| help_keyword              |
+| help_relation             |
+| help_topic                |
+| host                      |
+| index_stats               |
+| innodb_index_stats        |
+| innodb_table_stats        |
+| ndb_binlog_index          |
+| plugin                    |
+| proc                      |
+| procs_priv                |
+| proxies_priv              |
+| roles_mapping             |
+| servers                   |
+| slave_master_info         |
+| slave_relay_log_info      |
+| slave_worker_info         |
+| slow_log                  |
+| table_stats               |
+| tables_priv               |
+| time_zone                 |
+| time_zone_leap_second     |
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| user                      |
++---------------------------+
+34 rows in set (0.01 sec)
+
+# quite a lot!
+
+
+
+
+# let's create our own database to hold some shopping information:
+
+
+MariaDB [mysql]> create database shopping;
+Query OK, 1 row affected (0.02 sec)
+
+
+
+# now that we've created the database we have to use it,
+# ie., set it so that all our subseqent queries will apply to that particular db
+
+
+
+MariaDB [mysql]> use shopping;
+Database changed
+
+
+# now we're in the shopping database we need to create a table to store our data
+# all databases need to know about tables are:
+# 1. what columns (fields) they have
+# 2. what type of values go in these columns
+
+# however the types that databases provide are not exactly the same as those in PHP
+# but are very close
+
+# in addition, though, we typically add in extra information about columns when we create a table
+# we often say whether they can be null (empty) or not
+# whether they have a default value
+# and if they are a primary key...
+
+
+
+MariaDB [shopping]> CREATE TABLE users (
+->     id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+->     username VARCHAR(255) NOT NULL,
+->     bio TEXT NULL
+-> );
+
+# above all the SQL commands are in capitals,
+# everything in lower case is an identifier (name) that we have chosen
+# (SQL commands can be in lower case, but i've used uppercase here to be clear)
+
+# in SQL parentheses ie, ()  are usually denoting a *group*
+# here they denote a group of columns *defintions*, each separated by a command
+
+# each entry in the group tells mysql what the column of our users table is:
+# 1. going to be called
+# 2. what type is going to have (INTEGER = whole number, VARCHAR = fixed sized string, TEXT = large string)
+# 3. whether it can be null or not (ie., empty)
+# 4. whether it automatically increases by one (auto_incrment)
+# 4. and whether we're using it as a primary key (ie. whether it is unique for every entry)

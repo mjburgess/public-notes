@@ -1,0 +1,44 @@
+
+
+<h1>Articles</h1>
+	<ul>
+		<?php foreach($vars['articles'] as $article): ?>
+		<li> <?= $article['title']; ?>
+			[ <a href="/post.php?id=<?= $article['id']; ?>">ed</a> |
+			<a href="/admin.php?action=delarticle&id=<?= $article['id']; ?>">del</a> ]
+		</li>
+	<?php endforeach; ?>
+	</ul>
+
+
+<h1>Users</h1>
+<ul>
+	<?php foreach($vars['users'] as $user): ?>
+		<li><?= $user['username']; ?> (<?= USER_ROLES[$user['role']]; ?>) [<a href="/admin.php?action=deluser&id=<?= $user['id']; ?>">del</a>]</li>
+	<?php endforeach; ?>
+
+</ul>
+
+<h1>New User</h1>
+<form action="/admin.php?action=newuser" method="post" style="width: 70%">
+	<div>
+	<label for="username">Username: </label>
+	<input name="username" type="text"/>
+	</div>
+
+	<div>
+	<label for="password">Password: </label>
+	<input name="password" type="text"/>
+	</div>
+
+	<div>
+	<label for="title">Role: </label>
+		<select name="role">
+			<?php foreach(USER_ROLES as $id => $role): ?>
+			<option value="<?= $id; ?>"><?= $role; ?></option>
+		<?php endforeach; ?>
+		</select>
+	</div>
+
+	<button type="submit">New User</button>
+</form>

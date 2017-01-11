@@ -1,0 +1,23 @@
+
+<form action="post.php" method="post" style="width: 70%">
+	<div>
+	<label for="title">Title: </label>
+	<input name="title" type="text"/>
+
+	<div style="float: right">
+	<label for="title">Category: </label>
+		<select name="category">
+			<?php foreach(ARTICLE_CATEGORIES as $id => $category): ?>
+				<option value="<?= $id; ?>"><?= $category; ?></option>
+			<?php endforeach; ?>
+		</select>
+	</div>
+	</div>
+
+	<div>
+	<label for="body">Article: </label>
+	<textarea name="body" col="50" rows="20" style="width: 100%"></textarea>
+	</div>
+
+	<button type="submit">Post</button>
+</form>

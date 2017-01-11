@@ -1,0 +1,505 @@
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\Michael>cd C:\xampp\mysql\bin
+
+C:\xampp\mysql\bin>mysql
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 6
+Server version: 10.1.13-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| test               |
++--------------------+
+2 rows in set (0.00 sec)
+
+MariaDB [(none)]> use information_schema;
+Database changed
+MariaDB [information_schema]> show tables;
++---------------------------------------+
+| Tables_in_information_schema          |
++---------------------------------------+
+| ALL_PLUGINS                           |
+| APPLICABLE_ROLES                      |
+| CHARACTER_SETS                        |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENABLED_ROLES                         |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GLOBAL_STATUS                         |
+| GLOBAL_VARIABLES                      |
+| KEY_CACHES                            |
+| KEY_COLUMN_USAGE                      |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| STATISTICS                            |
+| SYSTEM_VARIABLES                      |
+| TABLES                                |
+| TABLESPACES                           |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| VIEWS                                 |
+| GEOMETRY_COLUMNS                      |
+| SPATIAL_REF_SYS                       |
+| CLIENT_STATISTICS                     |
+| INDEX_STATISTICS                      |
+| INNODB_SYS_DATAFILES                  |
+| TABLE_STATISTICS                      |
+| INNODB_SYS_TABLESTATS                 |
+| USER_STATISTICS                       |
+| INNODB_SYS_INDEXES                    |
+| XTRADB_RSEG                           |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_TRX                            |
+| CHANGED_PAGE_BITMAPS                  |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_LOCK_WAITS                     |
+| INNODB_LOCKS                          |
+| INNODB_TABLESPACES_ENCRYPTION         |
+| XTRADB_INTERNAL_HASH_TABLES           |
+| INNODB_SYS_FIELDS                     |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_CMP                            |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_SYS_TABLESPACES                |
+| INNODB_MUTEXES                        |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_SYS_FOREIGN_COLS               |
+| INNODB_CMP_RESET                      |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_SYS_FOREIGN                    |
+| INNODB_METRICS                        |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_CMPMEM                         |
+| INNODB_SYS_TABLES                     |
+| INNODB_SYS_COLUMNS                    |
+| INNODB_FT_CONFIG                      |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_CMP_PER_INDEX_RESET            |
+| XTRADB_READ_VIEW                      |
+| INNODB_SYS_SEMAPHORE_WAITS            |
+| INNODB_CHANGED_PAGES                  |
+| INNODB_FT_DELETED                     |
+| INNODB_TABLESPACES_SCRUBBING          |
++---------------------------------------+
+78 rows in set (0.00 sec)
+
+MariaDB [information_schema]> create database shopping;
+ERROR 1044 (42000): Access denied for user ''@'localhost' to database 'shopping'
+MariaDB [information_schema]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| test               |
++--------------------+
+2 rows in set (0.00 sec)
+
+MariaDB [information_schema]> ByeCtrl-C -- exit!
+
+
+C:\xampp\mysql\bin>mysql -uroot
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 7
+Server version: 10.1.13-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database shopping;
+ERROR 1007 (HY000): Can't create database 'shopping'; database exists
+MariaDB [(none)]> Ctrl-C -- exit!
+Bye
+
+C:\xampp\mysql\bin>mysql -uroot
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.1.13-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> drop database shopping;
+Query OK, 3 rows affected (0.06 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.00 sec)
+
+MariaDB [(none)]> create database shopping;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]> use shopping;
+Database changed
+MariaDB [shopping]> show tables;
+Empty set (0.00 sec)
+
+MariaDB [shopping]> create table users (
+    -> id integer not null primary key auto_increment,
+    -> username varchar(255) not null,
+    -> bio text null
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+MariaDB [shopping]> create table items (
+    -> id integer not null primary key auto_increment,
+    -> name varchar(255) not null,
+    -> price double not null default 0
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [shopping]> create table cart (
+    -> user_id integer,
+    -> item_id integer
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+MariaDB [shopping]> show tables;
++--------------------+
+| Tables_in_shopping |
++--------------------+
+| cart               |
+| items              |
+| users              |
++--------------------+
+3 rows in set (0.00 sec)
+
+MariaDB [shopping]> desc cart;
++---------+---------+------+-----+---------+-------+
+| Field   | Type    | Null | Key | Default | Extra |
++---------+---------+------+-----+---------+-------+
+| user_id | int(11) | YES  |     | NULL    |       |
+| item_id | int(11) | YES  |     | NULL    |       |
++---------+---------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+MariaDB [shopping]> desc users;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| username | varchar(255) | NO   |     | NULL    |                |
+| bio      | text         | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+MariaDB [shopping]> desc items;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(255) | NO   |     | NULL    |                |
+| price | double       | NO   |     | 0       |                |
++-------+--------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+MariaDB [shopping]> show tables;
++--------------------+
+| Tables_in_shopping |
++--------------------+
+| cart               |
+| items              |
+| users              |
++--------------------+
+3 rows in set (0.00 sec)
+
+MariaDB [shopping]> desc items;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(255) | NO   |     | NULL    |                |
+| price | double       | NO   |     | 0       |                |
++-------+--------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+MariaDB [shopping]> insert into users (username, bio) values ('mj', 'rake');
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [shopping]> insert into users (username, bio) values ('sherlock', 'detective');
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [shopping]> insert into users (username) values ('watson');
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [shopping]> select * from users;
++----+----------+-----------+
+| id | username | bio       |
++----+----------+-----------+
+|  1 | mj       | rake      |
+|  2 | sherlock | detective |
+|  3 | watson   | NULL      |
++----+----------+-----------+
+3 rows in set (0.00 sec)
+
+MariaDB [shopping]> select username from users;
++----------+
+| username |
++----------+
+| mj       |
+| sherlock |
+| watson   |
++----------+
+3 rows in set (0.00 sec)
+
+MariaDB [shopping]> select * from items;
+Empty set (0.00 sec)
+
+MariaDB [shopping]> insert into items (name, price) values ('strapless', 100);
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [shopping]> insert into items (name, price) values ('chuckas', 500);
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [shopping]> insert into items (name, price) values ('cufflinks', 150);
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [shopping]> select * from items;
++----+-----------+-------+
+| id | name      | price |
++----+-----------+-------+
+|  1 | strapless |   100 |
+|  2 | chuckas   |   500 |
+|  3 | cufflinks |   150 |
++----+-----------+-------+
+3 rows in set (0.00 sec)
+
+MariaDB [shopping]> desc cart;
++---------+---------+------+-----+---------+-------+
+| Field   | Type    | Null | Key | Default | Extra |
++---------+---------+------+-----+---------+-------+
+| user_id | int(11) | YES  |     | NULL    |       |
+| item_id | int(11) | YES  |     | NULL    |       |
++---------+---------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+MariaDB [shopping]> insert into cart values (1, 1) (1, 2) (1, 3);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(1, 2) (1, 3)' at line 1
+MariaDB [shopping]> insert into cart values (1, 1), (1, 2), (1, 3);
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+MariaDB [shopping]> insert into cart values (2, 1), (1, 2);
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+MariaDB [shopping]> select * from cart;
++---------+---------+
+| user_id | item_id |
++---------+---------+
+|       1 |       1 |
+|       1 |       2 |
+|       1 |       3 |
+|       2 |       1 |
+|       1 |       2 |
++---------+---------+
+5 rows in set (0.00 sec)
+
+MariaDB [shopping]> select * from cart, items, users where
+    -> cart.item_id = items.id    AND
+    -> cart.user_id = users.id
+    -> ;
++---------+---------+----+-----------+-------+----+----------+-----------+
+| user_id | item_id | id | name      | price | id | username | bio       |
++---------+---------+----+-----------+-------+----+----------+-----------+
+|       1 |       1 |  1 | strapless |   100 |  1 | mj       | rake      |
+|       1 |       2 |  2 | chuckas   |   500 |  1 | mj       | rake      |
+|       1 |       3 |  3 | cufflinks |   150 |  1 | mj       | rake      |
+|       2 |       1 |  1 | strapless |   100 |  2 | sherlock | detective |
+|       1 |       2 |  2 | chuckas   |   500 |  1 | mj       | rake      |
++---------+---------+----+-----------+-------+----+----------+-----------+
+5 rows in set (0.00 sec)
+
+MariaDB [shopping]> select * from items where price > 100;
++----+-----------+-------+
+| id | name      | price |
++----+-----------+-------+
+|  2 | chuckas   |   500 |
+|  3 | cufflinks |   150 |
++----+-----------+-------+
+2 rows in set (0.00 sec)
+
+MariaDB [shopping]> p
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'p' at line 1
+MariaDB [shopping]> select * from items;
++----+-----------+-------+
+| id | name      | price |
++----+-----------+-------+
+|  1 | strapless |   100 |
+|  2 | chuckas   |   500 |
+|  3 | cufflinks |   150 |
++----+-----------+-------+
+3 rows in set (0.00 sec)
+
+MariaDB [shopping]> select * from items where price > 100
+    -> ;
++----+-----------+-------+
+| id | name      | price |
++----+-----------+-------+
+|  2 | chuckas   |   500 |
+|  3 | cufflinks |   150 |
++----+-----------+-------+
+2 rows in set (0.00 sec)
+
+MariaDB [shopping]> select * from cart, items, users where
+    -> cart.item_id = items.id    AND
+    -> cart.user_id = users.id
+    -> ;
++---------+---------+----+-----------+-------+----+----------+-----------+
+| user_id | item_id | id | name      | price | id | username | bio       |
++---------+---------+----+-----------+-------+----+----------+-----------+
+|       1 |       1 |  1 | strapless |   100 |  1 | mj       | rake      |
+|       1 |       2 |  2 | chuckas   |   500 |  1 | mj       | rake      |
+|       1 |       3 |  3 | cufflinks |   150 |  1 | mj       | rake      |
+|       2 |       1 |  1 | strapless |   100 |  2 | sherlock | detective |
+|       1 |       2 |  2 | chuckas   |   500 |  1 | mj       | rake      |
++---------+---------+----+-----------+-------+----+----------+-----------+
+5 rows in set (0.00 sec)
+
+MariaDB [shopping]> select * from cart, users, items;
++---------+---------+----+----------+-----------+----+-----------+-------+
+| user_id | item_id | id | username | bio       | id | name      | price |
++---------+---------+----+----------+-----------+----+-----------+-------+
+|       1 |       1 |  1 | mj       | rake      |  1 | strapless |   100 |
+|       1 |       1 |  2 | sherlock | detective |  1 | strapless |   100 |
+|       1 |       1 |  3 | watson   | NULL      |  1 | strapless |   100 |
+|       1 |       1 |  1 | mj       | rake      |  2 | chuckas   |   500 |
+|       1 |       1 |  2 | sherlock | detective |  2 | chuckas   |   500 |
+|       1 |       1 |  3 | watson   | NULL      |  2 | chuckas   |   500 |
+|       1 |       1 |  1 | mj       | rake      |  3 | cufflinks |   150 |
+|       1 |       1 |  2 | sherlock | detective |  3 | cufflinks |   150 |
+|       1 |       1 |  3 | watson   | NULL      |  3 | cufflinks |   150 |
+|       1 |       2 |  1 | mj       | rake      |  1 | strapless |   100 |
+|       1 |       2 |  2 | sherlock | detective |  1 | strapless |   100 |
+|       1 |       2 |  3 | watson   | NULL      |  1 | strapless |   100 |
+|       1 |       2 |  1 | mj       | rake      |  2 | chuckas   |   500 |
+|       1 |       2 |  2 | sherlock | detective |  2 | chuckas   |   500 |
+|       1 |       2 |  3 | watson   | NULL      |  2 | chuckas   |   500 |
+|       1 |       2 |  1 | mj       | rake      |  3 | cufflinks |   150 |
+|       1 |       2 |  2 | sherlock | detective |  3 | cufflinks |   150 |
+|       1 |       2 |  3 | watson   | NULL      |  3 | cufflinks |   150 |
+|       1 |       3 |  1 | mj       | rake      |  1 | strapless |   100 |
+|       1 |       3 |  2 | sherlock | detective |  1 | strapless |   100 |
+|       1 |       3 |  3 | watson   | NULL      |  1 | strapless |   100 |
+|       1 |       3 |  1 | mj       | rake      |  2 | chuckas   |   500 |
+|       1 |       3 |  2 | sherlock | detective |  2 | chuckas   |   500 |
+|       1 |       3 |  3 | watson   | NULL      |  2 | chuckas   |   500 |
+|       1 |       3 |  1 | mj       | rake      |  3 | cufflinks |   150 |
+|       1 |       3 |  2 | sherlock | detective |  3 | cufflinks |   150 |
+|       1 |       3 |  3 | watson   | NULL      |  3 | cufflinks |   150 |
+|       2 |       1 |  1 | mj       | rake      |  1 | strapless |   100 |
+|       2 |       1 |  2 | sherlock | detective |  1 | strapless |   100 |
+|       2 |       1 |  3 | watson   | NULL      |  1 | strapless |   100 |
+|       2 |       1 |  1 | mj       | rake      |  2 | chuckas   |   500 |
+|       2 |       1 |  2 | sherlock | detective |  2 | chuckas   |   500 |
+|       2 |       1 |  3 | watson   | NULL      |  2 | chuckas   |   500 |
+|       2 |       1 |  1 | mj       | rake      |  3 | cufflinks |   150 |
+|       2 |       1 |  2 | sherlock | detective |  3 | cufflinks |   150 |
+|       2 |       1 |  3 | watson   | NULL      |  3 | cufflinks |   150 |
+|       1 |       2 |  1 | mj       | rake      |  1 | strapless |   100 |
+|       1 |       2 |  2 | sherlock | detective |  1 | strapless |   100 |
+|       1 |       2 |  3 | watson   | NULL      |  1 | strapless |   100 |
+|       1 |       2 |  1 | mj       | rake      |  2 | chuckas   |   500 |
+|       1 |       2 |  2 | sherlock | detective |  2 | chuckas   |   500 |
+|       1 |       2 |  3 | watson   | NULL      |  2 | chuckas   |   500 |
+|       1 |       2 |  1 | mj       | rake      |  3 | cufflinks |   150 |
+|       1 |       2 |  2 | sherlock | detective |  3 | cufflinks |   150 |
+|       1 |       2 |  3 | watson   | NULL      |  3 | cufflinks |   150 |
++---------+---------+----+----------+-----------+----+-----------+-------+
+45 rows in set (0.00 sec)
+
+MariaDB [shopping]> select * from cart, items, users where
+    -> cart.item_id = items.id    AND
+    -> cart.user_id = users.id
+    -> ;
++---------+---------+----+-----------+-------+----+----------+-----------+
+| user_id | item_id | id | name      | price | id | username | bio       |
++---------+---------+----+-----------+-------+----+----------+-----------+
+|       1 |       1 |  1 | strapless |   100 |  1 | mj       | rake      |
+|       1 |       2 |  2 | chuckas   |   500 |  1 | mj       | rake      |
+|       1 |       3 |  3 | cufflinks |   150 |  1 | mj       | rake      |
+|       2 |       1 |  1 | strapless |   100 |  2 | sherlock | detective |
+|       1 |       2 |  2 | chuckas   |   500 |  1 | mj       | rake      |
++---------+---------+----+-----------+-------+----+----------+-----------+
+5 rows in set (0.00 sec)
+
+MariaDB [shopping]> select username, name, price from cart, items, users where
+    -> cart.item_id = items.id    AND
+    -> cart.user_id = users.id
+    -> ;
++----------+-----------+-------+
+| username | name      | price |
++----------+-----------+-------+
+| mj       | strapless |   100 |
+| mj       | chuckas   |   500 |
+| mj       | cufflinks |   150 |
+| sherlock | strapless |   100 |
+| mj       | chuckas   |   500 |
++----------+-----------+-------+
+5 rows in set (0.00 sec)
+
+MariaDB [shopping]> update items set price = price * 1.33;
+Query OK, 3 rows affected (0.00 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+MariaDB [shopping]> update users set username = 'Michael', bio = 'fop' where id = 1;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [shopping]> select * from users where id = 1
+    -> ;
++----+----------+------+
+| id | username | bio  |
++----+----------+------+
+|  1 | Michael  | fop  |
++----+----------+------+
+1 row in set (0.00 sec)
+
+MariaDB [shopping]> delete from users where bio is null;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [shopping]> select * from users;
++----+----------+-----------+
+| id | username | bio       |
++----+----------+-----------+
+|  1 | Michael  | fop       |
+|  2 | sherlock | detective |
++----+----------+-----------+
+2 rows in set (0.00 sec)
+
+MariaDB [shopping]>
