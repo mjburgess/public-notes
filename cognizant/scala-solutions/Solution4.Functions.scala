@@ -5,6 +5,16 @@
 // Q. define a function which takes a csv string and returns its parts
 val exampleCSV = "jefferson, pa$$, virginia, president"
 
+def csvParts(csv: String) = csv.split(", ")
+
+println(csvParts(exampleCSV)(0))
+
+//Q. define a function called last which returns the last part of your name 
+
+//Q. define a method that accepts a function as an argument 
+// the method should call the function with "Thomas Jefferson"
+// and print the result
+
 
 //Q. define an annoymous function to use with login() below
 //.. pass the username and password above along with your annoymous function 

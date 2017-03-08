@@ -27,11 +27,12 @@ val mixed = List(1, "2", false, 3.4)
 
 // Q. print out every element of this list
 
+//Q. using a range, print out "Ho!" three times 
 
-// Q. print out  "you're allowed in ${name}" for all the the adults
+// Q. print out s"you're allowed in ${name}" for all the the adults
 val people = List("Michael 10", "John 20", "Watson 40")
 
-// HINT: .split
+// HINT: .split 
 
 //Q. define ages, a Vector[Int] of the ages 
 //HINT: .split .toInt 
@@ -39,11 +40,8 @@ val people = List("Michael 10", "John 20", "Watson 40")
 // Q. determine the average age
 //HINT: use a var total and while
 
-
 println(s"The average age is ${total/ages.length}")
 
-
-//Q. using a range, print out "Ho!" three times 
 
 
 // EXTRA
