@@ -1,4 +1,5 @@
- https://www.dropbox.com/sh/bzf493tl7n5mqh0/AADcHqcp9vy1jtnpCPDkQRWGa?dl=0
+https://gitlab.com/qatraining/public-notes/tree/master/cognizant
+https://gitlab.com/qatraining/public-notes.git
 
 
 DropBox:
