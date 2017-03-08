@@ -1,4 +1,4 @@
-https://gitlab.com/qatraining/public-notes/tree/master/cognizant
+https://gitlab.com/qatraining/public-notes
 https://gitlab.com/qatraining/public-notes.git
 
 

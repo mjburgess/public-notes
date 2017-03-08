@@ -4,7 +4,6 @@
 
 
 // PART 1 -- BRANCHING & MATCHING
-
 val time = "AM"
 
 //Q. define the val greeting to be either "Hello" if time is AM, or "Goodbye" if time is PM
@@ -32,13 +31,13 @@ val mixed = List(1, "2", false, 3.4)
 // Q. print out  "you're allowed in ${name}" for all the the adults
 val people = List("Michael 10", "John 20", "Watson 40")
 
-// HINT: .toInt .split
+// HINT: .split
 
-//Q. define ages, a vector of the ages 
-
+//Q. define ages, a Vector[Int] of the ages 
+//HINT: .split .toInt 
 
 // Q. determine the average age
-//HINT: use a var total 
+//HINT: use a var total and while
 
 
 println(s"The average age is ${total/ages.length}")
