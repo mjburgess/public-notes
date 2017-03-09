@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb2df3f9-33ec-47cd-917e-3eef09bf90fe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objs.sc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../scala-exercises/Exercise7.OO.scala" afterPath="$PROJECT_DIR$/../../scala-exercises/Exercise7.OO.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/abst.sc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cstr.sc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inher.sc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/traitex.sc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/traits.sc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/trinheritance.sc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oo.sc" afterPath="$PROJECT_DIR$/oo.sc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objs.sc" afterPath="$PROJECT_DIR$/objs.sc" />
     </list>
     <ignored path="worksheets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="objs.sc" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/objs.sc">
+      <file leaf-file-name="traitex.sc" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/traitex.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
+            <state relative-caret-position="561">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -70,6 +74,12 @@
         <option value="$PROJECT_DIR$/resc.sc" />
         <option value="$PROJECT_DIR$/oo.sc" />
         <option value="$PROJECT_DIR$/objs.sc" />
+        <option value="$PROJECT_DIR$/inher.sc" />
+        <option value="$PROJECT_DIR$/abst.sc" />
+        <option value="$PROJECT_DIR$/cstr.sc" />
+        <option value="$PROJECT_DIR$/traits.sc" />
+        <option value="$PROJECT_DIR$/trinheritance.sc" />
+        <option value="$PROJECT_DIR$/traitex.sc" />
       </list>
     </option>
   </component>
@@ -491,7 +501,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -673,8 +685,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/objs.sc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
+        <state relative-caret-position="203">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <marker date="1489093887000" expanded="true" signature="0:241" ph="/.../" />
+            <marker date="1489093887000" expanded="true" signature="242:377" ph="/.../" />
+            <marker date="1489093887000" expanded="true" signature="495:557" ph="{...}" />
+            <marker date="1489093887000" expanded="true" signature="661:796" ph="{...}" />
+            <marker date="1489093887000" expanded="true" signature="890:954" ph="{...}" />
+            <marker date="1489093887000" expanded="true" signature="1058:1105" ph="{...}" />
+            <marker date="1489093887000" expanded="true" signature="1153:1186" ph="{...}" />
+            <marker date="1489093887000" expanded="true" signature="1201:1237" ph="{...}" />
+            <marker date="1489093887000" expanded="true" signature="1322:1377" ph="/.../" />
+            <marker date="1489093887000" expanded="true" signature="1420:1423" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inher.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <marker date="1489094450000" expanded="true" signature="275:320" ph="{...}" />
+            <marker date="1489094450000" expanded="true" signature="354:458" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abst.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding>
+            <marker date="1489095788000" expanded="true" signature="1:277" ph="/.../" />
+            <marker date="1489095788000" expanded="true" signature="321:1269" ph="{...}" />
+            <marker date="1489095788000" expanded="true" signature="399:524" ph="/.../" />
+            <marker date="1489095788000" expanded="true" signature="558:633" ph="{...}" />
+            <marker date="1489095788000" expanded="true" signature="635:726" ph="/.../" />
+            <marker date="1489095788000" expanded="true" signature="758:839" ph="{...}" />
+            <marker date="1489095788000" expanded="true" signature="841:928" ph="/.../" />
+            <marker date="1489095788000" expanded="true" signature="1009:1115" ph="{...}" />
+            <marker date="1489095788000" expanded="true" signature="1033:1085" ph="{...}" />
+            <marker date="1489095788000" expanded="true" signature="1146:1189" ph="{...}" />
+            <marker date="1489095788000" expanded="true" signature="1221:1269" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cstr.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traits.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1489096524000" expanded="true" signature="14:62" ph="{...}" />
+            <marker date="1489096524000" expanded="true" signature="77:115" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trinheritance.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <marker date="1489097385000" expanded="true" signature="13:47" ph="{...}" />
+            <marker date="1489097385000" expanded="true" signature="75:132" ph="{...}" />
+            <marker date="1489097385000" expanded="true" signature="159:218" ph="{...}" />
+            <marker date="1489097385000" expanded="true" signature="246:303" ph="{...}" />
+            <marker date="1489097385000" expanded="true" signature="334:393" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traitex.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding />
         </state>
       </provider>

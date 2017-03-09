@@ -16,6 +16,10 @@ class Person {
 */
 
 
+val name = "Michael"
+
+def formatName(name: String) = name.toUpperCase
+
 class Human(val numEyes: Int)
 
 object Human {
@@ -56,3 +60,35 @@ val msg = mycar match {
 }
 
 println(msg)
+
+
+class Tiger(val name: String)  {
+  def apply() = println(name)
+}
+
+object Tiger {
+  def apply() = println("HELLO")
+}
+
+val met = new Tiger("Michael")
+val ust = new Tiger("Trent")
+
+met()
+ust()
+
+Tiger()
+
+// mutators accessors
+// instance apply vs object apply
+
+
+
+
+
+
+class Person(var firstName: String) {
+}
+
+val you = new Person("Jefferson")
+
+you.firstName = "dfdss"
