@@ -69,6 +69,11 @@ for( letter <- "Michael") {
 // expression 
 val letters = for ( letter <- "Michael") yield letter  + 1
 
+// ASIDE: OPTION 
+
+val x: Any = 5
+val y: Any = "X"        // Any = String | Int
+val y: Int = 5
 
 
 // COMPREHENSIONS OVER LISTS 
