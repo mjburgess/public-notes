@@ -1,4 +1,4 @@
-/ CHAPTER 9:  FUNCTIONAL
+// CHAPTER 5:  FUNCTIONS
 // PROBLEM: 
 // PROCESS:
 // EXP?
@@ -107,6 +107,117 @@ println(method("victoria"))
 println(function.apply("victoria"))
 
 val fnFromMethod = method _         // wrap up method into a function 
+
+// FUNCTIONS vs METHODS 
+def firstName(name: String) = name.split(" ")(0)
+
+println(firstName("Fido Holmes"))
+println(first("Fluffy Jefferson"))      // called the same way 
+
+println(first)                       // scala reads a variable containing a value 
+
+// ERROR //  println(firstName)     // scala reads a comand to call a method 
+
+
+// repl // first. 
+
+println(first.apply("Fido Holmes"))         // first.apply is an apply method of the fido object 
+                                            // methods are not objects, they have no methods 
+
+
+// RECURSION 
+val people = List("Michael", "Sherlock", "Fluffy")
+
+//why recursion? 
+var str = ""
+for(p <- people) str += people 
+
+//or,
+str = "" + people(0) + people(1) + people(2)
+
+//or,
+str = f(Nil) + f(people(0)) + f(people(1)) + f(people(2))
+
+//or, -- what's going to keep the counter? there's no i += 1
+str = f(f(f(f(people))))
+
+// what must f do? 
+// peel away list into working-on-bit and pass on rest of it 
+
+/*
+f of empty list = "" 
+f of non-empty-list = work-on-first THEN work-on-rest
+*/
+
+
+//ASIDE: Pattern Matching lists
+val point  = (1, 2)
+val (x, y) = point 
+
+val people = "Michael" :: "Sherlock" :: List()
+val pets   = "Spot" :: "Fluffy" :: Nil
+
+people match {
+  case head :: rest => s"H ${head} R: ${rest}"
+  case Nil => "X"
+}
+
+// infinte recursion 
+
+def loop() =  loop()
+
+// terminating recursion 
+def loop(condition: Boolean) = condition match {
+    case true => loop(condition)        //continue
+    case false => 0                     //stop
+}
+
+
+
+val locations = List("UK", "US", "CA")
+
+def join(strs: List[String], sep: String = " "): String = strs match {              // return type required
+    case head :: tail => head + sep + join(tail)
+    case Nil => ""                                                                  // lists are Nil-terminated
+}
+
+val basket = List( ("Lemonade", 4.50), ("Cherries", 3.45), ("Bread", 2.33) )
+
+// def average(cart: List[(String, Double)]) = ???
+
+def average(cart: List[(String, Double)]): Double = cart match {
+    case head :: tail => head._2/cart.length + average(tail)
+    case Nil => 0
+}
+
+/* EXERCISE */
+
+def fact(a: Int, prd: Int = 1) = if(a == 0) prd else fact(a - 1, prd * a)
+
+
+def factorial(a: Int) = {
+  def fact(a: Int, prd: Int) = if(a == 0) prd else fact(a - 1, prd * a)
+
+  fact(a, 1)
+}
+
+def fact(a: Int, prd: Int = 1): Int = a match {
+    case 0 => prd
+    case _ => fact(a - 1, prd * a)
+}
+
+
+// INTERNAL ITERATION VS RECURSION
+def factorial(n: Int) = (1 to n).product
+
+locations.mkString " "
+
+(basket map { _._2 } reduce { _ + _ }) / basket.length
+
+
+//rarely a need, in practice for recursion:
+//1. methods should *appear* functional from the outside
+//2. internal iterators do 90% of the work 
 
 
 
@@ -294,242 +405,3 @@ ifL(true, fact(100), fact(50))
 
 
 
-
-// PART 2 -- COMBINATORS (VS. RECURSION)
-
-
-// .MAP 
-
-val names = List("Michael", "Sherlock", "Watson")
-names.map( (e: String) => "Mr. " + e )
-
-
-def prepMr(str: String) = "Mr. " + str
-
-prepMr("michael")
-
-
-names
-
-
-names.map(prepMr _)
-
-
-names.map( (e: String) => "Mr. " + e )
-
-
-names map( (e: String) => "Mr. " + e )
-
-
-names map( e => "Mr. " + e )
-
-
-names map(  "Mr. " + _ )
-
-
-names map {  "Mr. " + _ }
-
-
-for( e <- names ) yield "Mr. " + e
-
-
-val name = Some("Michael")
-
-
-name map { "Mr." + _ }
-
-
-val name: Option[String] = None
-
-
-name map { "Mr." + _ }
-
-
-val ages = List(18, 19, 20, 21)
-
-
-ages map { _ > 18 }
-
-
-
-// FLAT MAP
-val names = List("Fluffy Jefferson", "Fido Holmes", "Spot Sinatra")
-
-names map { _.split(" ") }
-
-//peeling away the type 
-names flatMap { _.split(" ") }
-
-names flatMap { _.split(" ").toUpperCase }
-
-
-// FOLDING & REDUCING
-
-ages reduce { _ + _ }
-
-
-ages.foldLeft(0)({ _ + _ })
-
-
-ages.foldLeft(0) { _ + _ }
-
-
-ages.foldLeft(0) { _ + _ }
-
-
-ages.reduce { _ + _ }
-
-
-ages map { _ > 18 }
-
-
-ages map { _ > 18 } reduce { _ && _ }
-
-
-val ages = List(18, 19, 20, 21)
-
-
-val ages = List(19, 19, 20, 21)
-
-
-ages map { _ > 18 } reduce { _ && _ }
-
-
-
-// PREDICATES
-
-val isAdult = (age: Int) => age > 18
-
-
-// EXISTS AND FORALL
-ages forall { _ > 18 }
-
-
-ages exists { _ < 18 }
-
-
-ages exists { _ > 18 }
-
-
-def isOpen() = true
-
-
-isOpen
-
-
-def somethign() = false
-
-
-def count(): Int = 0
-
-
-count()
-
-
-def count(): Option[Int] = None
-
-
-count()
-
-
-def count(): Option[Int] = Some(0)
-
-
-count()
-
-
-val names = List("Michael", "Andy")
-
-
-def loc(name: String) = {
-       val office = Map("Michael" -> List("London", "Newport"),
-      "Andy" -> List("Cardiff", "Newport"))
-     
-      office(name)
-      }
-
-
-loc("Michael")
-
-
-loc("Andy")
-
-
-loc("Andy")
-
-
-names
-
-
-names map loc _
-
-
-names flatMap loc _
-
-
-List(List(1,2), List(3,4))
-
-
-val ll = List(List(1,2), List(3,4))
-
-
-ll(0)
-
-
-ll(1)
-
-
-ll(0) ++ ll(1)
-
-
-// PART 3 -- FOR COMPREHENSIONS 
-
-
-// yield and map 
-
-for(id <- List(1, 2, 3)) yield id + 1000
-
-List(1, 2, 3) map { id => id + 1000 }
-
-
-
-for(pet <- List("Fluffy", "Spot")) println(pet)
-
-List("Fluffy", "Spot") foreach { pet => println(pet) }
-
-
-// flatMap
-val ids  = List(1, 2, 3)
-val pets = List("Fluffy", "Spot")
-
-for(id <- ids; pet <- pets) yield s"${id + 1000}: $pet"
-
-ids.flatMap { id =>
-    pets.map { pet => s"${id + 1000}: $pet" }
-}
-
-
-for(id <- ids; pet <- pets) yield s"${id + 1000}: $pet"
-
-1002: Spot, 1003: Fluffy, 1003: Spot)
-
-ids.flatMap { id => pets.map { pet => s"${id + 1000}: $pet" } }
-
-1002: Spot, 1003: Fluffy, 1003: Spot)
-
-
-// for "combinators" over option and list
-
-for(id <- ids; pet <- pets) yield s"${id + 1000}: $pet"
-
-1002: Spot, 1003: Fluffy, 1003: Spot)
-
-ids.flatMap { id => pets.map { pet => s"${id + 1000}: $pet" } }
-
-1002: Spot, 1003: Fluffy, 1003: Spot)
-
-pidsNil
-
-pidsSome
-
-pidsNone

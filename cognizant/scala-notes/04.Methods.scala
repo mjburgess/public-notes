@@ -122,90 +122,6 @@ def config(host: String, user: String, pass: String) = println(s"$user:$pass@$ho
 config(user="Michael", pass= "Test", host = "UK")
 
 
-/* EXERCISE */
-
-
-
-
-// PART 2 -- FUNCTIONS
-
-// ANNONYMOUS FUNCTIONS 
-val first = (name: String) => name.split(" ")(0)
-
-// same callying-style
-println(first("sherlock homles"))
-
-((name: String) => println(name.split(" ")(0)))("dr watson")  // invoke immediately
-
-
-val names = List("Fluffy Jefferson", "Fido Holmes", "Spot Sinatra")
-
-println(names.map(first))           // pass the function to map directly
-println(names map first)
-
-
-// FUNCTIONS vs METHODS 
-def firstName(name: String) = name.split(" ")(0)
-
-println(firstName("Fido Holmes"))
-println(first("Fluffy Jefferson"))      // called the same way 
-
-println(first)                       // scala reads a variable containing a value 
-
-// ERROR //  println(firstName)     // scala reads a comand to call a method 
-
-
-// repl // first. 
-
-println(first.apply("Fido Holmes"))         // first.apply is an apply method of the fido object 
-                                            // methods are not objects, they have no methods 
-
-
-// RECURSION 
-val locations = List("UK", "US", "CA")
-
-def join(strs: List[String], sep: String = " "): String = strs match {              // return type required
-    case head :: tail => head + sep + join(tail)
-    case Nil => ""                                                                  // lists are Nil-terminated
-}
-
-val basket = List( ("Lemonade", 4.50), ("Cherries", 3.45), ("Bread", 2.33) )
-
-// def average(cart: List[(String, Double)]) = ???
-
-def average(cart: List[(String, Double)]): Double = cart match {
-    case head :: tail => head._2/cart.length + average(tail)
-    case Nil => 0
-}
-
-/* EXERCISE */
-
-def fact(a: Int, prd: Int = 1) = if(a == 0) prd else fact(a - 1, prd * a)
-
-
-def factorial(a: Int) = {
-  def fact(a: Int, prd: Int) = if(a == 0) prd else fact(a - 1, prd * a)
-
-  fact(a, 1)
-}
-
-def fact(a: Int, prd: Int = 1): Int = a match {
-    case 0 => prd
-    case _ => fact(a - 1, prd * a)
-}
-
-
-// INTERNAL ITERATION VS RECURSION
-def factorial(n: Int) = (1 to n).product
-
-locations.mkString " "
-
-(basket map { _._2 } reduce { _ + _ }) / basket.length
-
-
-//rarely a need, in practice for recursion:
-//1. methods should *appear* functional from the outside
-//2. internal iterators do 90% of the work 
 
 // DEF VS VAL
 def helloByDef = "hello"
@@ -242,6 +158,9 @@ deferOnce //11:00:00 am
 deferOnce //11:00:00 am
 
 
+
+
+//... !!!
 //ASIDE: REFERENTIAL TRANSPARENCY 
 val heightM = 1.8
 val height = heightM * 100

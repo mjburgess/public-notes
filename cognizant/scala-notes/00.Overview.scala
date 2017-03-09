@@ -93,6 +93,7 @@ DAY             TITLE
 // TODO: Ex. 5, 12, 13
 // TODO: Nt. 9!      Exp. 7, 11, 13
 // TODO: Intellij SBT + TDD INTEGRATION
+// TODO: Review relationship between Methods/Functions
 
 //RD. STAGES
 // RD Nt 1-4, Ex 1-4

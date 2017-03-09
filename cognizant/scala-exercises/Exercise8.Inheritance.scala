@@ -2,20 +2,12 @@
 // PROBLEM:    
 // TIME:       25 m
 
-
 // PART 1
-
 
 // Q. create an abstract class Person with a val fullname
 //... and an abstract method def getID: String
 
-abstract class Person(val fullname: String) {
-    def getID: String
-
-    def getNameID = s"$fullname is ${getId}"
-}
-
-//Q. create the classses  Worker with a ni-number whose getID returns an NI number
+//Q. create the classs Worker with a worker-id number whose getID returns an NI number
 //.. and a FamilyMember with a role whose getID returns their role (eg. Father)
 
 class Worker(fn: String, val ni: String) extends Person(fn) {

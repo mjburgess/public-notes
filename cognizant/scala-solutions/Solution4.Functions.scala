@@ -10,6 +10,7 @@ def csvParts(csv: String) = csv.split(", ")
 println(csvParts(exampleCSV)(0))
 
 //Q. define a function called last which returns the last part of your name 
+val last =  (name: String) => name.split(" ").last
 
 //Q. define a method that accepts a function as an argument 
 // the method should call the function with "Thomas Jefferson"
