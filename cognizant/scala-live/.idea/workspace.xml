@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b9e34af-16cd-488a-8a43-f4ceba25b59f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/worksheets/42.errors.sc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/worksheets/matching.sc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worksheets/.idea/workspace.xml" afterPath="$PROJECT_DIR$/worksheets/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scala-notes/03.Flow.scala" afterPath="$PROJECT_DIR$/../scala-notes/03.Flow.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/worksheets/matching.sc" afterPath="$PROJECT_DIR$/worksheets/matching.sc" />
     </list>
     <ignored path="worksheets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +26,8 @@
       <file leaf-file-name="matching.sc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/worksheets/matching.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+            <state relative-caret-position="757">
+              <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -503,8 +499,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/worksheets/matching.sc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+        <state relative-caret-position="757">
+          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
           <folding />
         </state>
       </provider>
