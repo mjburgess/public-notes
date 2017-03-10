@@ -122,102 +122,10 @@ println(first)                       // scala reads a variable containing a valu
 // repl // first. 
 
 println(first.apply("Fido Holmes"))         // first.apply is an apply method of the fido object 
+                   
+                   
                                             // methods are not objects, they have no methods 
-
-
-// RECURSION 
-val people = List("Michael", "Sherlock", "Fluffy")
-
-//why recursion? 
-var str = ""
-for(p <- people) str += people 
-
-//or,
-str = "" + people(0) + people(1) + people(2)
-
-//or,
-str = f(Nil) + f(people(0)) + f(people(1)) + f(people(2))
-
-//or, -- what's going to keep the counter? there's no i += 1
-str = f(f(f(f(people))))
-
-// what must f do? 
-// peel away list into working-on-bit and pass on rest of it 
-
-/*
-f of empty list = "" 
-f of non-empty-list = work-on-first THEN work-on-rest
-*/
-
-
-//ASIDE: Pattern Matching lists
-val point  = (1, 2)
-val (x, y) = point 
-
-val people = "Michael" :: "Sherlock" :: List()
-val pets   = "Spot" :: "Fluffy" :: Nil
-
-people match {
-  case head :: rest => s"H ${head} R: ${rest}"
-  case Nil => "X"
-}
-
-// infinte recursion 
-
-def loop() =  loop()
-
-// terminating recursion 
-def loop(condition: Boolean) = condition match {
-    case true => loop(condition)        //continue
-    case false => 0                     //stop
-}
-
-
-
-val locations = List("UK", "US", "CA")
-
-def join(strs: List[String], sep: String = " "): String = strs match {              // return type required
-    case head :: tail => head + sep + join(tail)
-    case Nil => ""                                                                  // lists are Nil-terminated
-}
-
-val basket = List( ("Lemonade", 4.50), ("Cherries", 3.45), ("Bread", 2.33) )
-
-// def average(cart: List[(String, Double)]) = ???
-
-def average(cart: List[(String, Double)]): Double = cart match {
-    case head :: tail => head._2/cart.length + average(tail)
-    case Nil => 0
-}
-
 /* EXERCISE */
-
-def fact(a: Int, prd: Int = 1) = if(a == 0) prd else fact(a - 1, prd * a)
-
-
-def factorial(a: Int) = {
-  def fact(a: Int, prd: Int) = if(a == 0) prd else fact(a - 1, prd * a)
-
-  fact(a, 1)
-}
-
-def fact(a: Int, prd: Int = 1): Int = a match {
-    case 0 => prd
-    case _ => fact(a - 1, prd * a)
-}
-
-
-// INTERNAL ITERATION VS RECURSION
-def factorial(n: Int) = (1 to n).product
-
-locations.mkString " "
-
-(basket map { _._2 } reduce { _ + _ }) / basket.length
-
-
-//rarely a need, in practice for recursion:
-//1. methods should *appear* functional from the outside
-//2. internal iterators do 90% of the work 
 
 
 
@@ -353,44 +261,6 @@ repeat("!", 10) {
 
 
 
-// RECURSION
-// recursion is a form of iteration (looping)
-// better-describes some algos. & avoids mutable state 
-// recall: new-from-old via function call *is* FP
-
-
-//return type has to be provided for recursive functions
-def fact(n: Int): Int = if (n == 0) 1 else n * fact(n-1)
-
-// tail-calls 
-def fn(x: Int): Int =
-    if(f(x))
-        g(x)
-    else
-        h(x) + 1
-
-
-def fac(n: Int): Int = {
-    def go(i: Int, acc: Int) =
-        if (i == 0)
-            acc
-        else
-            go(i - 1, acc * i)
-
-    go(n, 1)
-}
-
-def fac(n: Int): Int = {
-    var i = n
-    var acc = 1
-
-    while (i > 0) {
-        acc *= i
-        i   -= 1
-    }
-
-    acc
-}
 
 // LAZYNESS
 def ifS(val cond: Boolean, val trueVal: Int, falseVal: Int) =

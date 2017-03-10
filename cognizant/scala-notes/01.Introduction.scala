@@ -5,7 +5,6 @@
 // USE? High-level understanding of scala, scalac, repl. 
 
 // WHY SCALA?
-
 // powerful 
 val services =  scala.io.Source.fromFile("/etc/services") // """C:\Windows\System32\drivers\etc\services"""
 
