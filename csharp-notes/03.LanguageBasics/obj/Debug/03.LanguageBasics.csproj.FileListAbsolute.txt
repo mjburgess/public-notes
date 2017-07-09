@@ -1,0 +1,10 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\03.LanguageBasics\bin\Debug\03.LanguageBasics.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\03.LanguageBasics\bin\Debug\03.LanguageBasics.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\03.LanguageBasics\bin\Debug\03.LanguageBasics.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\03.LanguageBasics\obj\Debug\03.LanguageBasics.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\03.LanguageBasics\obj\Debug\03.LanguageBasics.pdb
+\\instructor\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\03.LanguageBasics\bin\Debug\03.LanguageBasics.exe.config
+\\instructor\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\03.LanguageBasics\bin\Debug\03.LanguageBasics.exe
+\\instructor\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\03.LanguageBasics\bin\Debug\03.LanguageBasics.pdb
+\\instructor\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\03.LanguageBasics\obj\Debug\03.LanguageBasics.exe
+\\instructor\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\03.LanguageBasics\obj\Debug\03.LanguageBasics.pdb

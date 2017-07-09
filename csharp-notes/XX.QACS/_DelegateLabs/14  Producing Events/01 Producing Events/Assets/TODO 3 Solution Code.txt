@@ -1,0 +1,3 @@
+            if (Login != null) {
+                Login.Invoke(this, new LoginEventArgs(txtUsername.Text));
+            }

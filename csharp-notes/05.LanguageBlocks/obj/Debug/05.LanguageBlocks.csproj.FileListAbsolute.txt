@@ -1,0 +1,5 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\05.LanguageBlocks\bin\Debug\05.LanguageBlocks.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\05.LanguageBlocks\bin\Debug\05.LanguageBlocks.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\05.LanguageBlocks\bin\Debug\05.LanguageBlocks.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\05.LanguageBlocks\obj\Debug\05.LanguageBlocks.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\05.LanguageBlocks\obj\Debug\05.LanguageBlocks.pdb

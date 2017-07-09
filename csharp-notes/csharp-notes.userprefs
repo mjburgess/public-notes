@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{6717B6BB-1652-4E31-B9D5-D4E8F9A6EEEB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="14.LanguageLINQ/Program.cs">
+    <Files>
+      <File FileName="11.LanguageCollections/Program.cs" Line="137" Column="13" />
+      <File FileName="12.LanguageEvents/Program.cs" Line="235" Column="10" />
+      <File FileName="13.LanguageAdvanced/Program.cs" Line="41" Column="57" />
+      <File FileName="12.LanguageEvents/Exercise12.1.cs" Line="13" Column="36" />
+      <File FileName="13.LanguageAdvanced/Exercise13.1.cs" Line="1" Column="1" />
+      <File FileName="14.LanguageLINQ/Program.cs" Line="63" Column="50" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.00.Overview PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

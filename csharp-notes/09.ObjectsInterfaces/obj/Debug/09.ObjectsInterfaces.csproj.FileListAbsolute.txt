@@ -1,0 +1,6 @@
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/09.ObjectsInterfaces/obj/Debug/09.ObjectsInterfaces.csproj.CoreCompileInputs.cache
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/09.ObjectsInterfaces/bin/Debug/09.ObjectsInterfaces.exe.config
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/09.ObjectsInterfaces/bin/Debug/09.ObjectsInterfaces.exe
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/09.ObjectsInterfaces/bin/Debug/09.ObjectsInterfaces.pdb
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/09.ObjectsInterfaces/obj/Debug/09.ObjectsInterfaces.exe
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/09.ObjectsInterfaces/obj/Debug/09.ObjectsInterfaces.pdb

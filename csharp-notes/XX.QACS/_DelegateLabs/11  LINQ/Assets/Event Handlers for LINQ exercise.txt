@@ -1,0 +1,34 @@
+        private void btnFindByType_Click(object sender, EventArgs e)
+        {
+            string search = searchStringTextBox.Text.ToLower();
+            allItemsListBox.DataSource = 
+                MediaLibraryQueries.FindByType(myMediaLibrary, search, chkUseQueryExpression.Checked);
+        }
+
+        private void btnFindByTitle_Click(object sender, EventArgs e)
+        {
+            string search = searchStringTextBox.Text.ToLower();
+            allItemsListBox.DataSource =
+                MediaLibraryQueries.FindByTitle(myMediaLibrary, search, chkUseQueryExpression.Checked);
+        }
+
+        private void btnFBTOrderByDuration_Click(object sender, EventArgs e)
+        {
+            string search = searchStringTextBox.Text.ToLower();
+            allItemsListBox.DataSource =
+                MediaLibraryQueries.FindByTitleAndOrderByDuration(myMediaLibrary, search);
+        }
+
+        private void btnFBTOrderByDesc_Click(object sender, EventArgs e)
+        {
+            string search = searchStringTextBox.Text.ToLower();
+            allItemsListBox.DataSource =
+                MediaLibraryQueries.FindByTitleAndOrderByDurationDesc(myMediaLibrary, search);
+        }
+
+        private void btnFindByDuration_Click(object sender, EventArgs e)
+        {
+            string search = searchStringTextBox.Text.ToLower();
+            allItemsListBox.DataSource =
+                MediaLibraryQueries.FindByDuration(myMediaLibrary, search, chkUseQueryExpression.Checked);
+        }

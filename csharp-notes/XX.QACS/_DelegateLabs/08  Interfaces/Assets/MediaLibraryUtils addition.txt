@@ -1,0 +1,10 @@
+            myMediaLibrary.Items.Add(
+                 new Photo(
+                   "Earth From Space",
+                   "NASA",
+                   Path.Combine(imagesFolder, "EarthFromSpace.jpg")) { Rating = Rating.Fantastic });
+            myMediaLibrary.Items.Add(
+                new Photo(
+                    "Jellyfish",
+                    "unknown",
+                    Path.Combine(imagesFolder, "Jellyfish.jpg")) { Rating = Rating.Fantastic });

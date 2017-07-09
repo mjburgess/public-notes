@@ -1,0 +1,11 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\06.ObjectsClasses\bin\Debug\06.ObjectsClasses.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\06.ObjectsClasses\bin\Debug\06.ObjectsClasses.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\06.ObjectsClasses\bin\Debug\06.ObjectsClasses.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\06.ObjectsClasses\obj\Debug\06.ObjectsClasses.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\06.ObjectsClasses\obj\Debug\06.ObjectsClasses.pdb
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\06.ObjectsClasses\bin\Debug\06.ObjectsClasses.exe.config
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\06.ObjectsClasses\bin\Debug\06.ObjectsClasses.exe
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\06.ObjectsClasses\bin\Debug\06.ObjectsClasses.pdb
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\06.ObjectsClasses\obj\Debug\06.ObjectsClasses.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\06.ObjectsClasses\obj\Debug\06.ObjectsClasses.exe
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\06.ObjectsClasses\obj\Debug\06.ObjectsClasses.pdb

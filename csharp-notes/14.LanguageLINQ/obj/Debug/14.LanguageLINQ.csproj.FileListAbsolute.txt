@@ -1,0 +1,6 @@
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\14.LanguageLINQ\bin\Debug\14.LanguageLINQ.exe.config
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\14.LanguageLINQ\obj\Debug\14.LanguageLINQ.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\14.LanguageLINQ\bin\Debug\14.LanguageLINQ.exe
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\14.LanguageLINQ\bin\Debug\14.LanguageLINQ.pdb
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\14.LanguageLINQ\obj\Debug\14.LanguageLINQ.exe
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\14.LanguageLINQ\obj\Debug\14.LanguageLINQ.pdb

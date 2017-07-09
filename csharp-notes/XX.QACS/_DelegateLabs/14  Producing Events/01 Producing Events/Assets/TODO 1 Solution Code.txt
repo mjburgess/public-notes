@@ -1,0 +1,6 @@
+    public class LoginEventArgs : EventArgs {
+        public readonly string Username;
+        public LoginEventArgs(string username) {
+            this.Username = username;
+        }
+    }

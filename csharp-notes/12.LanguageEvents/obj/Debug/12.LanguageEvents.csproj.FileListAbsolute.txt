@@ -1,0 +1,6 @@
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/12.LanguageEvents/obj/Debug/12.LanguageEvents.csproj.CoreCompileInputs.cache
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/12.LanguageEvents/bin/Debug/12.LanguageEvents.exe.config
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/12.LanguageEvents/bin/Debug/12.LanguageEvents.exe
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/12.LanguageEvents/bin/Debug/12.LanguageEvents.pdb
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/12.LanguageEvents/obj/Debug/12.LanguageEvents.exe
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/12.LanguageEvents/obj/Debug/12.LanguageEvents.pdb

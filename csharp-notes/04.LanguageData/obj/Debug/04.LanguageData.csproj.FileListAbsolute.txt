@@ -1,0 +1,8 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\04.LanguageData\bin\Debug\04.LanguageData.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\04.LanguageData\bin\Debug\04.LanguageData.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\04.LanguageData\bin\Debug\04.LanguageData.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\04.LanguageData\obj\Debug\04.LanguageData.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\04.LanguageData\obj\Debug\04.LanguageData.pdb
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\04.LanguageData\bin\Debug\04.LanguageData.exe.config
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\04.LanguageData\obj\Debug\04.LanguageData.exe
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\04.LanguageData\obj\Debug\04.LanguageData.pdb

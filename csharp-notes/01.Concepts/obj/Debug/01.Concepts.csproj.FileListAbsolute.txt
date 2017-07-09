@@ -1,0 +1,15 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\01.Concepts\bin\Debug\01.Concepts.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\01.Concepts\obj\Debug\01.Concepts.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\01.Concepts\bin\Debug\01.Concepts.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\01.Concepts\bin\Debug\01.Concepts.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\01.Concepts\obj\Debug\01.Concepts.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\01.Concepts\obj\Debug\01.Concepts.pdb
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\01.Concepts\bin\Debug\01.Concepts.exe.config
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\01.Concepts\obj\Debug\01.Concepts.exe
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\01.Concepts\obj\Debug\01.Concepts.pdb
+\\instructor\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\01.Concepts\bin\Debug\01.Concepts.exe.config
+\\instructor\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\01.Concepts\obj\Debug\01.Concepts.exe
+\\instructor\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\01.Concepts\obj\Debug\01.Concepts.pdb
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\01.Concepts\bin\Debug\01.Concepts.exe
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\01.Concepts\bin\Debug\01.Concepts.pdb
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\01.Concepts\obj\Debug\01.Concepts.csprojResolveAssemblyReference.cache

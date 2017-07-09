@@ -1,0 +1,3 @@
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\csharp-notes\02.Compiling\bin\Debug\02.Compiling.exe.config
+\\instructor\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\02.Compiling\obj\Debug\02.Compiling.csprojResolveAssemblyReference.cache
+\\instructor\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\02.Compiling\bin\Debug\02.Compiling.exe.config

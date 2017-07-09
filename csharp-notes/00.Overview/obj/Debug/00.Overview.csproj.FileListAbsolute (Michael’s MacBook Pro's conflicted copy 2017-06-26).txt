@@ -1,0 +1,7 @@
+c:/users/administrator/documents/visual studio 2015/Projects/csharp-notes/00.Overview/bin/Debug/00.Overview.exe.config
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/bin/Debug/00.Overview.exe.config
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/bin/Debug/00.Overview.exe
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/bin/Debug/00.Overview.pdb
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.csproj.CoreCompileInputs.cache
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.exe
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.pdb

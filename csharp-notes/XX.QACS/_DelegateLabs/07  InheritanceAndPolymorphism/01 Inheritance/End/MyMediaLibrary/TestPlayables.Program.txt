@@ -1,0 +1,14 @@
+MediaLibrary library = new MediaLibrary();
+library.MediaItems.Add(new Movie("Jaws", "Spielberg"));
+library.MediaItems.Add(new Song("Shreveport Stomp", "Jelly-Roll Morton"));
+library.MediaItems.Add(new Picture("The Royal Family", "David Bailey"));
+
+foreach(MediaItem mi in library.MediaItems) {
+    // TODO 1 use the dollar style of string.Format to Console.WriteLine : Title, MainPerson and MainPersonRole
+    
+
+    PlayableMediaItem pmi = mi as PlayableMediaItem;
+    // TODO 2 use the Elvis operator to call IsAuthorized, Play(), Pause() and Stop()
+
+    Console.WriteLine();
+}

@@ -1,0 +1,25 @@
+c:/users/administrator/documents/visual studio 2015/Projects/csharp-notes/00.Overview/bin/Debug/00.Overview.exe.config
+C:/Users/Administrator/Documents/Visual Studio 2015/Projects/csharp-notes/00.Overview/bin/Debug/00.Overview.exe
+C:/Users/Administrator/Documents/Visual Studio 2015/Projects/csharp-notes/00.Overview/bin/Debug/00.Overview.pdb
+C:/Users/Administrator/Documents/Visual Studio 2015/Projects/csharp-notes/00.Overview/obj/Debug/00.Overview.csprojResolveAssemblyReference.cache
+C:/Users/Administrator/Documents/Visual Studio 2015/Projects/csharp-notes/00.Overview/obj/Debug/00.Overview.exe
+C:/Users/Administrator/Documents/Visual Studio 2015/Projects/csharp-notes/00.Overview/obj/Debug/00.Overview.pdb
+//instructor/Users/Administrator/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/bin/Debug/00.Overview.exe.config
+//instructor/Users/Administrator/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.exe
+//instructor/Users/Administrator/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.pdb
+//instructor/Users/Administrator/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/bin/Debug/00.Overview.exe
+//instructor/Users/Administrator/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/bin/Debug/00.Overview.pdb
+//instructor/Users/Administrator/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.csprojResolveAssemblyReference.cache
+C:/Users/Administrator/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/bin/Debug/00.Overview.exe.config
+C:/Users/Administrator/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.exe
+C:/Users/Administrator/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.pdb
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/bin/Debug/00.Overview.exe.config
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/bin/Debug/00.Overview.exe
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/bin/Debug/00.Overview.pdb
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.csprojResolveAssemblyReference.cache
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.csproj.CoreCompileInputs.cache
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.exe
+/Users/mjburgess/Dropbox/QA/courseware-dev/csharp-notes/csharp-notes/00.Overview/obj/Debug/00.Overview.pdb
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\00.Overview\bin\Debug\00.Overview.exe.config
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\00.Overview\obj\Debug\00.Overview.exe
+C:\Users\Administrator\Dropbox\QA\courseware-dev\csharp-notes\csharp-notes\00.Overview\obj\Debug\00.Overview.pdb
