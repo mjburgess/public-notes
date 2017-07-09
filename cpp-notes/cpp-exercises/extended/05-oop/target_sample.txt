@@ -1,0 +1,90 @@
+        Using Classes
+
+        Objectives
+
+        The objectives of this session are to pr
+
+        Reference Material
+
+        This practical session is based on the m
+        chapter. You might also like to refer to
+        appendix on the string class. 
+
+        The code for the practical session is lo
+        directory.
+
+        Overview
+
+        There are three questions, the last one 
+        1 and 3 are based on the same project wo
+        manipulation. Question 2 is a written ex
+        located at the end of this practical out
+
+        Sample solutions for the other practical
+        Solution.* subdirectories.
+
+        Practical Outline
+
+        1. Open the UseFile project and look at 
+        file.hpp header file. The aim of this pr
+        defined in file.hpp to copy one file to 
+        number of member functions that can be u
+        stream to a file, and read and write dat
+        to include the "file.hpp" header file. 
+
+        Declare two file objects, one for the so
+        target, and open one for reading on the 
+        for writing on the file target.txt. Set 
+        the source file and write it to the targ
+
+        Don't forget to check for the end of fil
+        you have completed the copy. 
+
+        Build and test your program. Compare the
+        source.txt file to confirm that the copy
+
+        2. Given the following spec, write out a
+
+        * A class is needed to represent the con
+        * Bank accounts are associated with an a
+        * Amounts may have amounts withdrawn and
+        * It is possible to set an overdraft on 
+        * It should be possible to query the acc
+          them directly.
+        * It must be possible to initialise a ba
+          that the opening balance is 0 and that
+
+        Hints:
+
+        * Assume the existence of a class money 
+        * Which member functions should be const
+
+        Optional
+
+        3. Using the UseFile project. Modify mai
+        in the output file by 8 spaces. Also tru
+        output file to 48 columns. You may wish 
+        or the appendix on string.
+
+        Answers
+
+        2. The following class definition satisf
+
+        class bank_account
+        {
+        public:
+            void set_up(
+                const string &name,
+                const string &number);
+            string name() const;
+            string number() const;
+            void  withdraw(const money &);
+            void  deposit(const money &);
+            money balance() const;
+            void  overdraft(const money &);
+            money overdraft() const;
+        private:
+            string holder, id;
+            money  current, limit;
+        };
+

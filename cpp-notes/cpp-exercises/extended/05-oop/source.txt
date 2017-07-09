@@ -1,0 +1,65 @@
+Exercise 7 – Using Classes
+Objective
+The objectives of this session are to practice using prewritten classes.
+Reference Material
+This practical session is based on the material in the Using Classes chapter. You might also like to refer to the online documentation or appendix on the string class.
+Overview
+There are three questions, the last one of which is optional. Questions 1 and 3 are based on the same project, and deal with file manipulation. Question 2 is a pencil and paper exercise – two possible solutions are located at the end of this practical outline.
+The code for this practical session is located in the C:\qacpp\Using Classes directory.
+Sample solutions for the other practical questions are located in the Solution.* subdirectories.
+Sample solutions are located in the Solution.* subdirectories:
+Practical Outline
+1.	Open the UseFile project and look at the usefile.cpp source file and file.hpp header file. The aim of this practical is to use the file class defined in file.hpp to copy one file to another. The file class has a number of member functions that can be used to open and close a data stream to a file, and read and write data from and to it. You will need to include the "file.hpp" header file in usefile.cpp to get access to the file class (#include "file.hpp").
+Declare two file objects, one for the source file and the other for the target, and open one for reading on the file source.txt and the other for writing on the file target.txt. Set up a loop to read a line from the source file and write it to the target file.
+Don't forget to check for the end of file and to close both files when you have completed the copy.
+Build and test your program. Compare the target.txt file against the source.txt file to confirm that the copy has been done correctly.
+
+2.	Given the following spec, write out a possible class definition:
+•	A class is needed to represent the concept of a bank account.
+•	Bank accounts are associated with an account name and an account number.
+•	Accounts may have amounts withdrawn and deposited.
+•	It is possible to set an overdraft on an account.
+•	It should be possible to query the account details, but not to change them directly.
+•	It must be possible to initialise a bank accounts details. It is assumed that the opening balance is 0 and that there is no overdraft agreement.
+Hints:
+•	Assume the existence of a class money that handles currency.
+•	Which member functions should be const and which should not?
+Optional
+3.	Using the UseFile project. Modify main in usefile.cpp to indent the lines in the output file by 8 spaces. Also truncate the total line length in the output file to 48 columns. You may wish to refer to the MSDN documentation .
+ 
+Answers
+2.	The following class definition is one solution given the spec:
+class bank_account
+{
+public:
+    void set_up(
+        const string & name,
+        const string & number);
+    string name() const;
+    string number() const;
+    void  withdraw(const money & amount);
+    void  deposit(const money & amount);
+    money balance() const;
+    void  overdraft(const money & new_limit);
+    money overdraft() const;
+private:
+    string holder, id;
+    money  current, limit;
+};
+
+Here is an alternative solution that uses slightly different naming conventions and passes arguments by value rather than by const reference:
+class bank_account
+{
+public:
+    void set_up(string name, string number);
+    string query_name() const;
+    string query_number() const;
+    void  withdraw(money amount);
+    void  deposit(money amount);
+    money query_balance() const;
+    void  arrange_overdraft(money new_limit);
+    money query_overdraft() const;
+private:
+    string holder, id;
+    money  current, limit;
+}

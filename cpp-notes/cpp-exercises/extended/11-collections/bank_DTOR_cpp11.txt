@@ -1,0 +1,16 @@
+/* 
+ alternative version of the destructor
+ using auto in a for loop
+*/
+
+bank::~bank()
+{
+	cout << "In the bank destructor, deleting accounts" << endl;
+
+	for (auto iter = thelist.begin(); iter != thelist.end(); ++iter)
+	{
+		account * pacct = *iter;
+		delete pacct;
+	}
+}
+
