@@ -17,7 +17,7 @@ height = 181
 
 # Q. define your age as a whole number of years plus a fraction of 12
 # HINT:  if there is two months until your birthday, you're age is + 10/12
-age = 27 + 10/12
+age = 27 + 10.0/12
 
 # Q. Use gets.chomp to get a first_name from the user.
 first_name = gets.chomp

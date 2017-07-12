@@ -83,6 +83,10 @@ loop do
   puts iter2.next
 end 
 
+# LOOPs EVAL/RETURNING
+
+message = loop { break "hi!" }
+puts message 
 
 # LOOP CONTROL 
 x = 0

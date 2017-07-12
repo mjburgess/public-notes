@@ -74,7 +74,15 @@ total = basket.map { |i| i[:price] }.reduce(:+)
 
 
 # b) what is the average price of an item at the store?
-average = total / basket.size
+# average = total / basket.size # NO! -- THE STORE!!
+
+total = 0
+for item in store
+  total += item[:price]
+end
+
+average = total / store.size
+
 
 # c) what were the last two items the user purchased?
   # HINT: use a slice

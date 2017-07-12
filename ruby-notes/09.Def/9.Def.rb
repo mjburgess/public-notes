@@ -289,26 +289,22 @@ p get_result
 
 
 
+# NO DIFFERENCE IN CLOSING OVER SCOPE:
 #procs 
 result = 300 
-
 get_result = Proc.new { result }
 
 p get_result.call
-
 result = 400 
 
 p get_result.call
 
 
-
 # lambda 
 result = 500 
-
 get_result = ->() { result }
 
 p get_result.call
-
 result = 600 
 
 p get_result.call 
@@ -316,9 +312,8 @@ p get_result.call
 
 
 # SCOPED BREAKING...
-
 def lambda_test
-  lam = lambda { return }
+  lam = ->() { return }
   lam.call
   puts "Hello world"
 end

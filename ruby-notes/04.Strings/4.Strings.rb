@@ -106,7 +106,7 @@ planets.each_with_index do |(planet, distance), i|
   puts format % [i, planet, distance]
 end
 
-puts "${name} is at %{distance}" % {name: 'Mars', distance: 227} 
+puts "${name} is at ${distance}" % {name: 'Mars', distance: 227} 
 
 # SLICING
 quote = "be the change you wish to see in the world!"

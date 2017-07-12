@@ -8,6 +8,7 @@
 
 # Q. create three hashes called ham, bacon, cheese
 #... each hash should have a name, price and weight key
+#... and whatever values you like
 
 # Q. use a for loop to print out all of ham's details
 #... ie. the name, price and weight
@@ -16,17 +17,18 @@
 #... which contains the ham, bacon and cheese hashes
 
 
-# Q. we now have a store we can populate customers baskets from
-#... create an empty array called basket to hold one customer's shopping
+# Q. we now have a store from which we can populate customers baskets 
+#... create an empty array called basket 
+#... to hold one customer's shopping
 
 # Q. now ask which items to put in it
 #... loop over store
 #... ask the user if they would like to add one of the items to their basket
-# HINT: gets.chomp & accept Y or N as input, if Y push the item on to basket
+# HINT: gets.chomp & test for Y or N as input
+#...    if Y push the item on to basket
 
 # Q. now display their basket
 #... providing all the info about their items
-
 
 # Q. using all the data collections above, print the answer to these questions:
 # a) what is the total cost of the user's basket?
@@ -34,11 +36,13 @@
 # c) what were the last two items the user purchased?
   # HINT: use a slice
 
+
+# EXTRA
 # Q. what items in the store did the user not purchase?
 
 
-# EXTRA
-# Q. revise the defintion of basket
+# Q. in the following new problem,
+#... revise the following defintion of basket
 #... so that a modification to basket[0] does not affect cart
 cart = [
     ['Bread', 2.54],
@@ -46,16 +50,18 @@ cart = [
     ['Cheese', 3.45]
 ]
 
+p cart                          # expected
+
 basket = cart
 basket[0] = ['Fruit', 4.55]
 
-p basket
-p cart
+p basket                        # expected
+p cart                          # expected
 
-basket[0][1] = 3.54     #ie., so this does not affect cart
+basket[0][1] = 3.54         
 
-p basket
-p cart
+p basket                        # expected
+p cart                          # unexpected! -- FIX
 
 
 

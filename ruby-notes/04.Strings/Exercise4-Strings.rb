@@ -54,7 +54,7 @@ author = {
 
 # Q. use the range below
 #... and  .chr to print the letters A to Z on one line
-letters = 65..(65 + 26)
+letters = 65...(65 + 26)
 
 # Q. now define letters using a character range and print again
 

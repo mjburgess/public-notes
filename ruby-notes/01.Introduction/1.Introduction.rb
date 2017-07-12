@@ -1,5 +1,9 @@
 # CHAPTER 1:  INTRODUCTION
 
+# PART 1 -- VM, TOOLS & LANGUAGE OVERVIEW 
+# PART 2 -- INTRO TO PROGRAMMING LANGUAGES 
+
+
 ## WHY IS THIS IMPORTANT?: 
 =begin
 Why do we use programming languages?

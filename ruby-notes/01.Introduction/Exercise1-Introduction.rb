@@ -29,12 +29,9 @@
 # Q. define two variables one containing your first name
 #... and another containing your last name.
 
-fname = 'Michael'
-lname = 'Burgess'
 
 
 # Q. display them using print with a space between each one.
-print fname + ' ' + lname
 
 # Q. run this script from the command-line
 
@@ -49,15 +46,11 @@ print fname + ' ' + lname
 #... the contents of the present working directory.
 # HINT: '.' is the current directory
 
-p Dir.entries '.'
-
 # Q. Use the Dir.chdir function to change
 #... the present working directory to your home folder.
 
-Dir.chdir '~'
 
 # Q. Use the Dir.entries function to list
 #... the contents of the present working directory.
-p Dir.entries('.')
 
 ## REVIEW: What did we learn from this exercise?

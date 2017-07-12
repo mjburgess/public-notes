@@ -4,6 +4,20 @@
 ## 
 ## 
 
+# FOR LOOPS
+
+for n in ['fido', 'spot', 'fluffy']
+  p n
+end
+
+for k, v in { uk: 'London', fr: 'Paris'}
+  p k, v
+end
+
+for i in 10..20
+  p i
+end
+
 
 # OVERVIEW: ARRAY vs. HASH
 
@@ -93,6 +107,10 @@ pets = %w(fido spot fluffy)
 p pets
 
 
+# ADVANCED:
+p basket.send(:[], 1)
+# ie., :[] is the lookup message
+
 # SLICING
 cart = %w(lemonade cherries cake tea coffee cherries milk)
 p cart 
@@ -111,6 +129,11 @@ p cart[-6..-1]
 
 # a strange range 
 p cart[2..-1]
+
+# ADVANCEDD
+
+items = [1, 2]
+items << items 
 
 
 # ASSINING TO A SLICE
@@ -332,17 +355,3 @@ p range.drop 3
 
 
 
-
-# FOR LOOPS
-
-for n in ['fido', 'spot', 'fluffy']
-  p n
-end
-
-for k, v in { uk: 'London', fr: 'Paris'}
-  p k, v
-end
-
-for i in 10..20
-  p i
-end

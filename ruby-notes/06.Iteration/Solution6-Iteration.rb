@@ -17,26 +17,48 @@
 loop {
   puts "Username? "
   username = gets.chomp
-  if username.strip.empty? || username.size < 2
+  if username.strip.size < 2
     next
   end
 
 
   puts "Name? "
   fullname = gets.chomp
-  if fullname.strip.empty? || fullname.size < 2
+  if fullname.strip.size < 2
     next
   end
 
   puts "Age? "
   age = gets.chomp
-  if age.strip.empty? || age.size < 2
+  if age.strip.size < 2
     next
   end
 
   break
 }
 
+
+# EXTRA: rewrite the last two questions as one simple loop
+#... which adds user info. to a hash
+
+
+info = ['username', 'fullname', 'age']
+user = {}
+
+info.each { |q| 
+    puts "What's your #{q} ?"
+    user[q] = gets.chomp while user[q].strip.size < 2
+}
+
+# SIMPLEST
+info.each { |q| user[q] = loop {
+        puts "What's your #{q} (len > 2)?"
+        info = gets.chomp
+        break info if info.strip.size < 2
+    }  
+}
+
+# BETTER: use well-named functions!
 
 # Q. add all of the user information to a hash called user
 #... , using, .each, print it
@@ -69,6 +91,8 @@ message = ''
 until message.start_with? correct_prefix
   message = gets.chomp
 end
+
+# OR,  while !
 
 # Q. create a hash called hobbies with several string keys:
 #... programming, photography, etc.
@@ -145,8 +169,6 @@ p names.reduce(false) { |t, e| t || e.include?('John') }
 #... then use .map and .all? to check the details
 # HINT: break next
 
-info = ['username', 'fullname', 'age']
-user = {}
 
 loop do
   info.each { |i|

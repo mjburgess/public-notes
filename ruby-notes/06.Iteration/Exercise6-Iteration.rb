@@ -20,6 +20,8 @@
 # EXTRA: rewrite the last two questions as one simple loop
 #... which adds user info. to a hash
 
+
+
 # Q. for each element of my_hobbies
 #... print the type of hobby and its name on separate lines
 my_hobbies = ['philosophy-mind', 'painting-acrylic']
@@ -78,9 +80,6 @@ p names.reduce(false) { |t, e| t || e.include?('John') }
 #... use .map and .all? to check the details
 # HINT: break next
 
-
-info = ['username', 'fullname', 'age']
-user = {}
 
 
 ## REVIEW: What did we learn from this exercise?

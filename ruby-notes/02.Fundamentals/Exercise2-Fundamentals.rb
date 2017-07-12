@@ -17,6 +17,8 @@
 # HINT:  if there is two months until your birthday, you're age is + 10/12
 
 # Q. Use gets.chomp to get a first_name from the user.
+# HINT:  try answer = gets.chomp  in the REPL
+# Q. what's the value of answer? where does it come from. 
 
 # Q. print the following:
 # a) first_name

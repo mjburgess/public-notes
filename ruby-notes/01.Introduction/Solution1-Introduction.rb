@@ -36,8 +36,8 @@
 
 RUBY_VERSION
 
-# Q. define two variables one containing your first name
-#... and another containing your last name.
+# Q. define two variables one for your first name
+#... and another for your last name.
 
 first = "Sherlock"
 last = "Homles"
@@ -61,7 +61,7 @@ print last
 
 # EXTRA
 
-# The ruby standard library has a class called Dir.
+# The ruby standard library has a object called Dir.
 # Dir provides information
 # and access to directory-related operating system commands.
 

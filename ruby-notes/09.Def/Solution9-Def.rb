@@ -47,7 +47,8 @@ login(*details)
 
 
 # Q. redefine and call the login function again,
-# this time specify the password first then the username.
+# so that this time *when calling*
+# the password is first then the username.
 # HINT: pass the arguments by keyword
 
 def login(username:, password:)
@@ -91,12 +92,26 @@ def print_details
 end
 
 def change_details
-  $details.map(&:upcase)
+  $details = $details.map { |i| i.upcase }
+
+  # OR,
+  $details = $details.map(&:upcase)
 end
 
 # Q. change_details() then print_details()
 
 change_details
 print_details
+
+
+# compare with,
+#
+#    new_details = change_details(old_details)
+#    print_details(new_details)
+#
+# where input/output into function uses parameters 
+# and return values
+#...
+#... which is better?
 
 ## REVIEW: What did we learn from this exercise?

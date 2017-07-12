@@ -1,41 +1,60 @@
 ##
+
 =begin
 
-These are some questions I take to be relevant to the philosophy of programming. Many more need to be added, and mostly, my answers are incomplete or answered quite technically. This is a draft.
+Introduction
 
-Table of Contents
+This is an unfinished article which may be of interest to programmers, philosophers with an interest and perhaps some academically-minded lay people. I have made it available now in its early draft stage, as I welcome comments and feedback.
 
-What is Programming?. 1
+Here I attempt to answer are some questions I take to be relevant to the philosophy of programming. Many more need to be added, and mostly, my answers are incomplete or answered quite briefly and technically. This will change as I expand it towards a general audience.
 
-What are Programs?. 1
+“The Philosophy of Programming” only weakly exists: though I have seen seminars offered at Harvard and a University in Denmark. It is as I see it, primarily a conjunction of the philosophy of science and the philosophy of mind – with as much metaphysics and epistemology as might be expected.
 
-What are programmers doing when they program?. 2
+There are a handful of departments which have tried to unify many concerns across philosophy into a “Philosophy of Computer Science”. My concerns here however, are narrower.
 
-Can Computers Program?. 2
+At the end of this article I list several technical and philosophical resources.
 
-What is a successful program?. 3
+Overview
 
-Does the program solve the problem?. 3
+Introduction
 
-The origin of bugs. 4
+Overview.. 
 
-What is it to design according to a problem?. 4
+What is Programming?
 
-How do changes in the problem domain affect the programmer?. 5
+What are Programs?
 
-Is agile the best approach to Good Programming?. 5
+How does the program text relate to the running program?
 
-How does Agile Work?. 6
+Do imperative languages mean the same thing as declarative languages?
 
-What is it to think in the “terms” of a language?. 7
+What are programmers doing when they program?
 
-Do imperative languages mean the same thing as declarative languages?. 7
+Can Computers Program?
 
-Are some paradigms better at representing problems than others?. 7
+What is a successful program?
 
-Does the program accurately describe the problem?. 8
+Does the program solve the problem?
 
+The origin of bugs.
 
+Why is Software Always Buggy?
+
+What is it to design according to a problem?
+
+How do changes in the problem domain affect the programmer?
+
+Is agile the best approach to Good Programming?
+
+How does Agile Work?
+
+Rougher Sketches & Ideas...
+
+What is it to think in the “terms” of a language?
+
+Does the program accurately describe the problem?
+
+Are some paradigms better at representing problems than others?
 
 What is Programming?
 
@@ -43,41 +62,63 @@ Making programs.
 
 What are Programs?
 
-The program text (“source”) is a representation of the problem domain.
+The text of a program is an expression of a programmer's understanding. An understanding acquired, in part, by problem solving. By living in the problem. By experiencing the world and having a view on which aspects are relevant. On the selection of a small slice of it from these experiences: “the problem domain”. A domain which becomes represented in language: the source text. A text whose meaning is then discarded, in translation to the meaningless oscillations of an electrical field guided somehow by the intention of the programmer.
 
-The running program is the solution to that problem.
+Programming therefore requires causal contact with the world and ability to understand one’s perceptions, ideas, concerns, and other faculties in a reflective, creative and analytical mode.
 
-The text of a program is the expression of a person’s understanding acquired, in part, by problem solving. By living in the problem. By experience the world and having a view on which aspects are relevant. On construction a small artificial world from these experiences “the problem domain” and expressing his understand of this domain in a (programming) language.
-
-This requires causal contact with the world and ability to understand one’s perceptions, ideas, concerns, and other faculties in a reflective, creative and analytical mode.
+Therefore, the program text (“source”) is a representation of the problem domain. The running program is the solution to that problem.
 
 Compare with a painting:  the “text” of the painting represents the scene, looking-at the painting is the process of being informed about the scene.
 
-In the case of paintings, execution has a primarily informative purpose.
+In the case of paintings, looking (running-the-painting) has a primarily informative purpose.
 
-The text of the program and the running machine code (ie., distributed oscillating electrical field) are not the same object.
+The text of the program and the running machine code are as distinct as the painting and the visual experience the on-looker has of it. With a painting – “running” is a process from oil to mental states via light. The “running” painting is the mental state (ie., specific neurochemical state) that contact with the light scattered off the canvas causes.
 
-However with a painting – “running” is a process from ink to mental states via an EM field (light). The “running” painting is the mental state (ie., specific neurochemical state) that contact with the light scattered off the canvas causes.
+By creating a causal pathway from “text” to specific kinds of electrical oscillation – “compilation” --  we are able to operate conceptually in the conceptual domain of the problem without worrying about electrical concerns.
 
-By creating a causal pathway from “text” to specific kinds of electrical oscillation – “compilatiton” --  we are able to operate conceptually in the textual domain (mental-abstract-conceptual) without worrying about electrical concerns.
+As the painter can operate in the domain of oil, colour and shape – and not in the domain of the neuroscience of human visual perception.
 
-As the painter is able to operate in the domain of oil, colour and shape – and not in the domain of the neuroscience of human visual perception.
+How does the program text relate to the running program?
+
+The text of a program undergoes very many translations. Over and over and over again is the most general language rewritten into, ultimately, millions of commands eventually sent to the processor.
+
+One line of code in a “high-level” language may, in the end, correspond to millions of 0s and 1s: millions of electrical oscillations.
+
+There is therefore no hope, in modern programming at least, in trying to solve problems by tracking the changes to the CPU surface.
+
+Equally, of course, the painter would have no hope taking a needle to the visual cortex of a human being and prodding it just so his patient would experience his painting. Far easier for the painter to put oil on his canvas and let the translatory processes of the human neural system create the final running state: that of the experience the on-looker has of the painted canvas.
+
+This is a mysterious process. Though its mystery lies, perhaps, primarily in its complexity. We can isolate each step in the causal change and understand its origin and final point. And we can step back an observe how these steps run millions of times.
+
+The CPU operates successfully because it is a machine which builds safe, reliable and predicable complexity from simplicity.
+
+Do imperative languages mean the same thing as declarative languages?
+
+An imperative language is one which describes problems as a series of actions. A declarative language is one which describes problems in terms of what the solution should look like.
+
+So they do not mean the same thing.
+
+While the running program is, in a sense, metaphorically imperative (ie., it is a series of electrical actions occurring in a processor) there is no need to express the problem as a series of actions. The metaphorically “imperative” nature of the final 0s and 1s does not erase fundamental distinctions at the level of the text.
+
+The imperative (action-by-action) paradigm was selected when it was important to allow the programmer to see in text what the likely efficiency of the running program would be. To make the text as representative of the running as possible, and not the problem.
+
+Representing the problem was left to stray comments, interspersed among the assembly. Comments, nevertheless, are part of the program text – so this isn’t a disaster for accuracy.
 
 What are programmers doing when they program?
 
-They are not typing!
+Not just typing!
 
-Programming is understanding a problem domain in the terms a programming language provides. That could, often, be achieved through writing in the language. Or it could be achieved whilst gardening.
+Programming is understanding a problem domain in the terms a programming language provides. That could, often, be achieved through writing in the language. Or it could be achieved whilst showering, gardening or taking a brisk walk.
 
 Can Computers Program?
 
-A digital computer is an electrified piece of mental whose extended electrical field osscilates in a way which, metaphorically, “follows rules”.
+A digital computer is an electrified piece of mental whose extended electrical field oscillates in a way which, metaphorically, “follows rules”. The oscillation is not confined to the CPU: it is distributed across the CPU, RAM, and so on… all the way to the display. It is the display’s capacity to translate this into light which gives the computer an appearance of life. In much the same way that a children’s flick book appears to present living cartoon characters.
 
-It is highly doubtful that any system of this kind can solve a problem (ie., think creatively, analytically, embedded in a series of concerns and priorities).
+It is highly doubtful that any system of this kind can solve a problem: ie., think creatively, analytically, embedded in a series of concerns and priorities.
 
-There is a superstition, frequent in the history of human culture, that thinking is some magical process. Rather, thinking is a bodily process. Thinking is something animals do because they under go specific sorts of neurochemical reactions. Thinking is not something wood, sand, water nor metal (however cleverly electrified) does.
+There is a superstition, frequent in the history of human culture, that thinking is some magical process. Rather, thinking is a bodily process. Thinking is something animals do because they undergo specific sorts of neurochemical reactions. Thinking is not something wood, sand, water nor metal (however cleverly electrified) does.
 
-The neuroscientist will never learn anything about cognition by throwing out all of his brains  and animals and instead turning to the structure of silicon.
+The neuroscientist will never learn anything about cognition by throwing out all of his brains and animals and instead turning to the structure of silicon.
 
 Specific processes which occur in the world do so because the objects they involve have specific actions on one another (“causes”). The reason that glass is transparent is because of the specific way it interacts with light. The reason the stomach digests pizza is because of its regulated acidity. The reason thinking happens is because of the extended and complex interactions of the nervous system.
 
@@ -91,11 +132,11 @@ This then should answer very clearly the initial question: can computers program
 
 What is a successful program?
 
-Two independent sets of criteria: operational (“the management”) and representational (“the programmer”).
+There are (at least!) two independent sets of criteria for success: operational (“the management”) and representational (“the programmer”).
 
-Does the program solve the problem?
+1.	Does the program solve the problem?
 
-Does the program accurately describe the problem?
+2.	Does the program accurately describe the problem?
 
 Does the program solve the problem?
 
@@ -103,13 +144,27 @@ The operational test can seem straightforward: does it work?
 
 However there are very many (epistemological) issues with testing: How do you know it works?
 
-Rarely is the operation of something easily characterised as taking a small-set of input states to a small set of some other output states – but involves an (almost?) infinite number of possible initial states and evolutionary events leading to an almost infinite number of final states. For example, the uppercase() program should take every string! It is impossible to guarantee this.
+Rarely is the operation of something easily characterised as taking a small-set of input states to a small set of some other output states – but involves an (almost?) infinite number of possible initial states and evolutionary events leading to an almost infinite number of final states.
+
+For example, the uppercase() program should accept every string of text and produce one of every string of text!
+
+The type of that program may be written   String to String
+
+where ‘String’ denotes the infinite set of all pieces of text, ie., {a, aa, aaa, …, b, bb, bbb, …, abc… , A, AA, AAA,… B, BBB…}.
+
+So this program takes any member of this infinite set to one other member of the same set.
+
+eg., a to A  ;   michael to  MICHAEL
+
+It is impossible to guarantee this.
 
 You cannot test every initial state. You test the important ones. You test many (every?) evolutionary rules on these and compare the final state to the expected. At a certain point you say, “all the ones that I have seen behave the way I expect”.
 
-Which only leaves open the problem of induction.
+Which only leaves open the problem of induction: merely because you have seen success many times, that provides no guarantee that it will occur every time.
 
-Problem of induction is solved with abduction: you hypothesize causal relationships and use past observations as evidence for these causal relationships.
+I am not guaranteed the sun will rise tomorrow, no matter how often it has done before.
+
+Problem of induction is “solved” with abduction: you hypothesize causal relationships and use past observations as evidence for these causal relationships.
 
 The reason I believe the sun will rise tomorrow isn't merely that it has risen every day previous, but that I believe there to be a sun in orbit around the earth which obeys the laws of gravity (etc.). It is my confidence in these laws which increase, to a very high degree, my confidence the sun will rise tomorrow. Much more than the mere series of past observations.
 
@@ -119,7 +174,9 @@ And so…
 
 The origin of bugs
 
-Errors: syntax, logical, incorrect design, invalidated design.
+Kinds of Errors: syntax, logical, incorrect design, invalidated design.
+
+Why is Software Always Buggy?
 
 If we’re designing to a problem, what happens when that problem changes?
 
@@ -133,17 +190,17 @@ How much would it cost to add a petrol engine to an electric car? If it is more 
 
 What is it to design according to a problem?
 
-A problem is not general: to design to solve every problem is to recreate the entire universe. Problems are strange things, they are often subtly unlike the world and its ordinary human concerns.
+A problem is not general: to design to solve every problem is to recreate the entire universe. Problems are strange things, they are often subtly unlike the world we’re used to and its ordinary human concerns.
 
 Consider getting to work via car/train/etc. Does the problem domain require we model cars as having wheels? No, indeed the inclusion of wheels in the program would signify a failure to understand the problem!
 
 When teaching a student how to bake you do not remark on the colour of the walls in the kitchen: to include this information as part of the baking process would be to misunderstand baking. “Baking” is a narrow set of concerns which selects only some objects, and only in some ways, out of the infinite number of potential descriptions of a kitchen (including say, describing it in terms of the cosmic rays moving through).
 
-Suppose now a manager asks: “what is the efficiency, per wheel, of travelling on cars vs. Planes?” .
+Suppose now a manager asks: “what is the efficiency, per wheel, of travelling on cars vs. Planes?” . Or “can you update our baking program, so that the only chocolate cakes are baked if the walls are blue?.
 
-Perhaps the company was starting to manufacture wheels. This shift in concerns, quite radical looking at how our prior design would play out, does not register as radical to the manager. It may not even appear as a shift in the problem when it is in fact a radical reorganisation of the domain.
+Perhaps the company was starting to manufacture wheels. Or perhaps, the school has now colour-coded its kitchens. This shift in concerns, quite radical looking at how our prior design would play out, does not register as radical to the manager. It may not even appear as a shift in the problem when it is in fact a radical reorganisation of the domain.
 
-Why? Because the manager fails to clearly distinguish the problem domain of “living in its broadest terms” from that which concerns the program. If we make this distinction clearly the introduction of wheels is no trivial matter.
+Why? Because the manager fails to clearly distinguish the problem domain of “living with its usual concerns” from that which concerns the program and the problem. If we make this distinction clearly the introduction of wheels (or wall colour) is no trivial matter.
 
 How do changes in the problem domain affect the programmer?
 
@@ -209,19 +266,21 @@ Rougher Sketches & Ideas...
 
 What is it to think in the “terms” of a language?
 
+The lagnauge of programers is full of strange terms, consider the claim, “this class should have more fields”. What do the terms ‘class’ and ‘fields’ refer to?
+
 ASIDE: We can say These “terms” form the ontology of the language: the abstract objects (eg. Class, function, etc.) that each term refers to.
 
-The claim “The class should have more fields” is true iff the class should have more fields. With this taskian/quinean approach we can map out the ontology of language. Let’s just take the manual and start there?
+The claim “The class should have more fields” is true iff the class should have more fields. With this taskian/quinean approach we can map out the ontology of language. So let’s just take the manual and start there?
 
 This is the denotational approach to programming semantics and ends up with mathematical objects.
 
-Do imperative languages mean the same thing as declarative languages?
+Does the program accurately describe the problem?
 
-No. While the running program is, in a sense, metaphorically imperative (ie., it is a series of electrical actions occurring in a processor) there is no need to express the problem as a series of actions.
+Joint-carving. Program must be accurate to the problem, not “to the world” (by which we usually mean ordinary human concerns).
 
-The imperative (action-by-action) paradigm was selected when it was important to allow the programmer to see in text what the likely efficiency of the running program would be. To make the text as representative of the running as possible, and not the problem.
+Problem needs to be identified clearly along lines of concern.
 
-Representing the problem was left to stray comments, interspersed among the assembly. Comments, nevertheless, are part of the program text – so this isn’t a disaster for accuracy.
+ 
 
 Are some paradigms better at representing problems than others?
 
@@ -241,12 +300,12 @@ In which case perhaps we’re in a dyamic equilibrium between program simplicity
 
 Accuracy can be maintained by changing the model, or sticking to the model and changing the problem!
 
-Does the program accurately describe the problem?
 
-Joint-carving. Program must be accurate to the problem, not “to the world” (by which we usually mean ordinary human concerns).
 
-Problem needs to be identified clearly along lines of concern.
+
+
 
 
 =end
+
 ##

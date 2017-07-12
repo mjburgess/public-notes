@@ -29,7 +29,7 @@ location = 'London, UK'
     p location.include? 'UK'
 
     p "# e) are you over 1.8m tall?"
-    p hieght >= 1.8
+    p height >= 1.8
 
     p "# f) are you an adult and in the UK?"
     p age >= 18 && location.include?('UK')
@@ -65,7 +65,7 @@ end
 #... print "It'll do"
 #... otherwise print "Nope, wont do!"
 
-if is_busy && (!is_near || is_cheap)      # or, (is_busy && !is_near) || is_cheap)
+if is_busy && (!is_far || is_cheap)      # or, (is_busy && !is_near) || is_cheap)
   p "It'll do"                            # Q. which should it be?
 else
   p "Nope, won't do!"
@@ -89,6 +89,20 @@ else
   p 'Chose D'
 end
 
+# Q. Can you rephrase this to use one puts operation?
+
+
+puts (if option == 'PubA'
+  'Chose A'
+elsif option == 'PubB'
+  'Chose B'
+elsif option == 'PubC'
+  'Chose C'
+else
+  'Chose D'
+end)
+
+# EXTRA:
 # Can you rephrase this to use a hash?
 # HINT: knowing the option, you need a string to print 
 

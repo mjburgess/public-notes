@@ -49,7 +49,10 @@ option = ['PubA', 'PubB', 'PubC', 'PubD'].sample
 # Q. if the option is 'PubA' print 'Chose A',
 #... and so on for B, C, D ...
 
+# Q. Can you rephrase this to use one puts operation?
 
+
+# EXTRA: 
 # Can you rephrase this to use a hash?
 # HINT: knowing the option, you need a string to print 
 
